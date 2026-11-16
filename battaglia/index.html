@@ -505,6 +505,11 @@ function ciclo(){
     if(B.over){ run=false; document.getElementById('b-via').textContent='▶ Nuova battaglia'; const r=document.getElementById('ris'); r.innerHTML=spiegazione(); r.className='ris on'; } }
   requestAnimationFrame(ciclo);
 }
+const PRESET={ '#forche':[{romani:'falange',nemico:'sanniti',terreno:'aspro'},'Forche Caudine (321 a.C.): i Romani combattono ancora in falange contro i Sanniti, tra le montagne.'],
+  '#cinocefale':[{romani:'legione',nemico:'falange',terreno:'aspro'},'Cinocefale (197 a.C.): le legioni contro la falange macedone di Filippo V. <i>In più:</i> si combatté su un terreno di colline.'],
+  '#pidna':[{romani:'legione',nemico:'falange',terreno:'aspro'},'Pidna (168 a.C.): le legioni contro la falange di Perseo. <i>In più:</i> secondo gli storici antichi, avanzando su un terreno irregolare la falange si scompose.'] };
+if(PRESET[location.hash]){ Object.assign(scelta,PRESET[location.hash][0]); seg('c-rom','romani'); seg('c-nem','nemico'); seg('c-ter','terreno');
+  const p=document.createElement('p'); p.className='lead'; p.style.cssText='background:#fff7e0;border:1px solid #ecd79a;border-radius:12px;padding:8px 12px;color:#5a4a1a'; p.innerHTML='<b>Dalla mappa delle conquiste.</b> '+PRESET[location.hash][1]+' Premi «Via!».'; document.querySelector('.ctrl').before(p); }
 nuova(); ciclo();
 window.__B=()=>B; window.__nuova=(o)=>{ Object.assign(scelta,o); seg('c-rom','romani'); seg('c-nem','nemico'); seg('c-ter','terreno'); nuova(); };
 window.__avanza=(n)=>{ for(let i=0;i<n&&!B.over;i++) B.step(); disegna(); pannello(); if(B.over){ const r=document.getElementById('ris'); r.innerHTML=spiegazione(); r.className='ris on'; } };
