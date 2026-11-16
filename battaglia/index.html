@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Battaglia">
+<meta name="theme-color" content="#f3ecdf">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<title>Falange o legione? Simulazione di battaglia</title>
+<style>
+/* VOICE: un banco di prova da museo didattico, chiaro e calmo
+   IDEA: il plastico di battaglia visto dall'alto, con le pedine dei soldati
+   PICTURE: il campo di battaglia animato, grande, sotto i comandi
+   COLOUR and TYPE: terra e cuoio; rosso romano, blu macedone, verde-bruno sannita; serif per i testi
+   LAYOUT: comandi in alto, campo grande, cronaca e spiegazione sotto */
+:root{color-scheme:light;--bg:#f3ecdf;--card:#fffdf8;--ink:#2a2622;--soft:#6f655a;--line:#e3d7c3;--roma:#b8432a;--mac:#2f5f86;--san:#6b6a2a;--ok:#3f8f5a}
+*{box-sizing:border-box;min-width:0;-webkit-tap-highlight-color:transparent}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 "Iowan Old Style","Palatino",Georgia,serif;
+ padding:max(14px,env(safe-area-inset-top)) max(14px,env(safe-area-inset-right)) max(18px,env(safe-area-inset-bottom)) max(14px,env(safe-area-inset-left))}
+.wrap{max-width:1060px;margin:0 auto}
+h1{font-size:clamp(26px,4vw,38px);line-height:1.08;margin:4px 0 4px;color:#8f3d22;text-wrap:balance}
+.lead{color:var(--soft);margin:0 0 12px;max-width:70ch}
+.ctrl{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:10px}
+.grp{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px}
+.grp b{display:block;font:700 12px/1.2 -apple-system,"Helvetica Neue",sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--soft);margin-bottom:7px}
+.seg{display:flex;gap:6px;flex-wrap:wrap}
+.seg button{flex:1 1 auto;min-height:44px;font:600 15px -apple-system,"Helvetica Neue",sans-serif;border:2px solid var(--line);background:#fff;color:var(--ink);border-radius:11px;padding:8px 10px;cursor:pointer}
+.seg button.on{border-color:var(--roma);background:#f9e6dc;color:#8f3d22}
+.bar{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:10px}
+.btn{min-height:46px;font:700 17px -apple-system,"Helvetica Neue",sans-serif;border:none;border-radius:13px;padding:10px 20px;background:var(--roma);color:#fff;box-shadow:0 3px 0 #8f3d22;cursor:pointer}
+.btn:active{transform:translateY(2px);box-shadow:0 1px 0 #8f3d22}
+.btn.sec{background:#fff;color:#2f5f86;border:2px solid #2f5f86;box-shadow:0 3px 0 #c9d6e0}
+.vel{margin-left:auto;display:flex;gap:6px;align-items:center;font:600 14px -apple-system,"Helvetica Neue",sans-serif;color:var(--soft)}
+.vel button{min-width:46px;min-height:44px;border-radius:10px;border:2px solid var(--line);background:#fff;font:700 14px -apple-system,sans-serif;cursor:pointer}
+.vel button.on{border-color:#2f5f86;color:#2f5f86}
+.campo{position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#e6dcc4}
+canvas{display:block;width:100%;height:auto;touch-action:manipulation}
+.ris{position:absolute;inset:auto 12px 12px 12px;background:rgba(255,253,248,.96);border-radius:14px;padding:14px 16px;border:2px solid var(--line);display:none;max-height:72%;overflow:auto;box-shadow:0 6px 24px rgba(0,0,0,.15)}
+.ris.on{display:block;animation:in .4s ease}
+@keyframes in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.ris h2{margin:0 0 6px;font-size:22px}
+.ris ul{margin:6px 0 0;padding-left:20px}
+.ris li{margin-bottom:4px}
+.sotto{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:10px;margin-top:10px}
+.pan{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px}
+.pan h3{margin:0 0 8px;font:700 12px -apple-system,"Helvetica Neue",sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--soft)}
+.riga{display:grid;grid-template-columns:92px minmax(0,1fr) 44px;gap:8px;align-items:center;font:14px -apple-system,"Helvetica Neue",sans-serif;margin-bottom:6px}
+.tr{height:12px;background:#eee4d3;border-radius:99px;overflow:hidden}.tr i{display:block;height:100%;border-radius:99px;transition:width .3s}
+.num{text-align:right;font-variant-numeric:tabular-nums;font-weight:700}
+.log{font-size:15px;line-height:1.4;max-height:190px;overflow:auto}
+.log p{margin:0 0 6px}.log time{font:700 12px -apple-system,sans-serif;color:var(--soft);margin-right:6px}
+.leg{display:flex;flex-wrap:wrap;gap:6px 14px;font:13px -apple-system,"Helvetica Neue",sans-serif;color:var(--soft);margin-top:8px}
+.leg span{display:inline-flex;align-items:center;gap:5px}.sw{width:11px;height:11px;border-radius:3px;display:inline-block}
+.note{font-size:13px;color:var(--soft);margin-top:10px}
+@media(max-width:760px){.ctrl{grid-template-columns:minmax(0,1fr)}.sotto{grid-template-columns:minmax(0,1fr)}.vel{margin-left:0}}
+@media(prefers-reduced-motion:reduce){.ris.on{animation:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Falange o legione? La prova sul campo</h1>
+<p class="lead">Scegli come schierare i Romani, contro chi combattono e su quale terreno, poi premi «Via!». La battaglia non è registrata: si svolge ogni volta secondo regole semplici, come una partita.</p>
+
+<div class="ctrl">
+ <div class="grp"><b>I Romani in…</b><div class="seg" id="c-rom"><button data-v="falange">Falange oplitica</button><button data-v="legione">Legione manipolare</button></div></div>
+ <div class="grp"><b>Contro…</b><div class="seg" id="c-nem"><button data-v="falange">Falange macedone</button><button data-v="sanniti">Guerrieri sanniti</button></div></div>
+ <div class="grp"><b>Terreno</b><div class="seg" id="c-ter"><button data-v="aperto">Campo aperto</button><button data-v="aspro">Valle stretta e aspra</button></div></div>
+</div>
+
+<div class="bar">
+ <button class="btn" id="b-via">▶ Via!</button>
+ <button class="btn sec" id="b-reset">↺ Rifai</button>
+ <div class="vel">Velocità <button data-s="2">1×</button><button data-s="5">2×</button><button data-s="10">4×</button></div>
+</div>
+
+<div class="campo">
+ <canvas id="cv" width="1000" height="700"></canvas>
+ <div class="ris" id="ris"></div>
+</div>
+
+<div class="leg" id="leg"></div>
+
+<div class="sotto">
+ <div class="pan"><h3>Forze in campo</h3><div id="forze"></div></div>
+ <div class="pan"><h3>Cronaca</h3><div class="log" id="log"><p>Premi «Via!» per cominciare.</p></div></div>
+</div>
+<p class="note">Una simulazione semplificata, non una ricostruzione storica: i numeri sono pari per tutti (circa 3.000 fanti per parte) e le regole riproducono ciò che dice il libro. La falange è fortissima in un urto frontale in pianura ma poco agile; i manipoli si muovono ciascuno da solo e si danno il cambio. Ogni partita è un po' diversa: prova a rifarla.</p>
+</div>
+
+<script>
+/* Motore della simulazione: falange e legione manipolare */
+const W = 1000, H = 700;
+const P = { K: 0.0042, fatRate: 0.0011, fatRec: 0.0016, cohRec: 0.0007 };
+
+function rng(seed){ let s = seed >>> 0; return () => { s = (s * 1664525 + 1013904223) >>> 0; return s / 4294967296; }; }
+
+function makeTerrain(kind, R){
+  if(kind === 'aperto') return { kind, xL: () => -1e9, xR: () => 1e9, patches: [], rocks: [] };
+  const xL = y => 120 + 175 * Math.sin(Math.PI * y / H) ** 2, xR = y => W - xL(y);
+  const patches = [], rocks = [];
+  for(let i = 0; i < 12; i++){ const y = 200 + R() * 300; const l = xL(y) + 30, r = xR(y) - 30; patches.push({ x: l + R() * (r - l), y, r: 34 + R() * 30 }); }
+  [[0.22, 270], [0.68, 300], [0.4, 395], [0.82, 420], [0.12, 450]].forEach(([f, y]) => { const l = xL(y) + 45, r = xR(y) - 45; rocks.push({ x: l + f * (r - l), y: y + R() * 20, r: 11 + R() * 6 }); });
+  return { kind, xL, xR, patches, rocks };
+}
+function rough(T, x, y){
+  if(T.kind === 'aperto') return 0;
+  let r = 0;
+  for(const p of T.patches){ const d = Math.hypot(x - p.x, y - p.y); if(d < p.r) r = Math.max(r, 0.45 + 0.5 * (1 - d / p.r)); }
+  const e = Math.min(x - T.xL(y), T.xR(y) - x); if(e < 45) r = Math.max(r, 0.7 * (1 - Math.max(e, 0) / 45));
+  return Math.min(1, r);
+}
+function blocked(T, x, y){
+  if(x < T.xL(y) || x > T.xR(y)) return true;
+  for(const k of T.rocks) if(Math.hypot(x - k.x, y - k.y) < k.r) return true;
+  return false;
+}
+
+const TIPI = {
+  falange:  { max: 300, w: 52, d: 44, sp: 0.42, rp: 0.9,  att: 1.15, defF: 2.0, defS: 0.45 },
+  veliti:   { max: 40,  w: 44, d: 10, sp: 0.9,  rp: 0.2,  att: 0.3,  defF: 0.5, defS: 0.4 },
+  hastati:  { max: 120, w: 36, d: 24, sp: 0.55, rp: 0.35, att: 1.0,  defF: 1.05, defS: 0.6 },
+  principes:{ max: 120, w: 36, d: 24, sp: 0.55, rp: 0.35, att: 1.05, defF: 1.1, defS: 0.6 },
+  triarii:  { max: 60,  w: 36, d: 12, sp: 0.5,  rp: 0.35, att: 1.15, defF: 1.25, defS: 0.65 },
+  sanniti:  { max: 215, w: 40, d: 30, sp: 0.75, rp: 0.12, att: 0.95, defF: 0.85, defS: 0.6 }
+};
+
+class Battle {
+  constructor(cfg){
+    this.cfg = cfg; this.R = rng(cfg.seed || 1);
+    this.T = makeTerrain(cfg.terreno, rng(cfg.terreno === 'aspro' ? 77 : 1));
+    this.units = []; this.groups = []; this.t = 0; this.log = []; this.over = null; this.jav = [];
+    this.stat = { varchi: 0, cambi: 0, schiacciati: 0, fianco: { R: 0, N: 0 }, fuga: { R: 0, N: 0 } };
+    this.flags = {};
+    this.schiera('R', cfg.romani); this.schiera('N', cfg.nemico);
+    this.init = { R: this.forza('R'), N: this.forza('N') };
+  }
+  U(side, kind, x, y, extra){
+    const t = TIPI[kind]; const dir = side === 'R' ? -1 : 1;
+    const u = Object.assign({ side, dir, kind, x, y, men: t.max, coh: 1, fat: 0, state: 'avanza', fuga: false, via: false, contatto: false, id: this.units.length }, t, extra || {});
+    u.att *= 0.93 + 0.14 * this.R(); u.x0 = x; u.y0 = y; this.units.push(u); return u;
+  }
+  schiera(side, tipo){
+    const R = side === 'R';
+    const y = v => R ? v : H - v; // specchio per il nemico
+    if(tipo === 'falange'){
+      const g = { side, dir: R ? -1 : 1, x: 500, y: y(560), segs: [] }; this.groups.push(g);
+      for(let i = 0; i < 10; i++){ const u = this.U(side, 'falange', 500 + (i - 4.5) * 52, g.y, { g, slot: i - 4.5 }); g.segs.push(u); }
+    } else if(tipo === 'legione'){
+      for(let i = 0; i < 10; i++) this.U(side, 'veliti', 500 + (i - 4.5) * 52, y(466), { state: 'avanza' });
+      for(let i = 0; i < 10; i++) this.U(side, 'hastati', 500 + (i - 4.5) * 52, y(520), { state: 'avanza', lane: 500 + (i - 4.5) * 52 });
+      for(let i = 0; i < 10; i++) this.U(side, 'principes', 500 + (i - 4.5) * 52 + 26, y(578), { state: 'riserva', lane: 500 + (i - 4.5) * 52 + 26 });
+      for(let i = 0; i < 10; i++) this.U(side, 'triarii', 500 + (i - 4.5) * 52, y(630), { state: 'riserva', lane: 500 + (i - 4.5) * 52 });
+    } else { // sanniti
+      for(let i = 0; i < 8; i++) this.U(side, 'sanniti', 500 + (i - 3.5) * 66, y(530), {});
+      for(let i = 0; i < 6; i++) this.U(side, 'sanniti', 500 + (i - 2.5) * 66, y(590), {});
+    }
+  }
+  pronto(o){ return o.state === 'riposo' && o.fat < 0.35 && o.coh > 0.55 && o.men > 0.42 * o.max; }
+  forza(side){ let m = 0; for(const u of this.units) if(u.side === side && !u.fuga && u.kind !== 'veliti') m += u.men; return m; }
+  coesione(side){ let s = 0, n = 0; for(const u of this.units) if(u.side === side && !u.fuga && u.kind !== 'veliti'){ s += u.coh * u.men; n += u.men; } return n ? s / n : 0; }
+  evento(chiave, testo){ if(chiave && this.flags[chiave]) return; if(chiave) this.flags[chiave] = 1; this.log.push({ t: this.t, testo }); }
+  nemici(u){ return this.units.filter(v => v.side !== u.side && !v.fuga && !v.via); }
+  amici(u){ return this.units.filter(v => v.side === u.side && v !== u && !v.fuga && !v.via); }
+  rect(u){ return [u.x - u.w / 2, u.y - u.d / 2, u.x + u.w / 2, u.y + u.d / 2]; }
+  sovrap(a, b, m = 0){ const A = this.rect(a), B = this.rect(b); return A[0] - m < B[2] && B[0] - m < A[2] && A[1] - m < B[3] && B[1] - m < A[3]; }
+  libero(u, x, y){
+    const T = this.T, hw = u.w / 2, hd = u.d / 2;
+    const fy = y + u.dir * hd;
+    for(const k of [-1, -0.5, 0, 0.5, 1]){ if(blocked(T, x + k * hw, fy) || blocked(T, x + k * hw, y)) return false; }
+    for(const v of this.units){ if(v === u || v.fuga || v.via || v.side === u.side) continue;
+      const tmp = { x, y, w: u.w, d: u.d }; if(this.sovrap(tmp, v, -1)) return false; }
+    return true;
+  }
+  muovi(u, dx, dy){
+    const n = [[dx, dy], [dx * 0.7 + dy * 0.7, dy * 0.7 - dx * 0.7], [dx * 0.7 - dy * 0.7, dy * 0.7 + dx * 0.7], [dy, -dx], [-dy, dx]];
+    for(const [a, b] of n){ if(this.libero(u, u.x + a, u.y + b)){ u.x += a; u.y += b; return true; } }
+    return false;
+  }
+
+  step(){
+    if(this.over) return;
+    this.t++;
+    const T = this.T, units = this.units;
+    for(const u of units) u.contatto = false;
+
+    /* ---- contatti e combattimento ---- */
+    const danni = new Map(); const add = (u, k, v) => { const o = danni.get(u) || { m: 0, c: 0 }; o[k] += v; danni.set(u, o); };
+    for(let i = 0; i < units.length; i++){ const a = units[i]; if(a.fuga || a.via) continue;
+      for(let j = i + 1; j < units.length; j++){ const b = units[j]; if(b.fuga || b.via || b.side === a.side) continue;
+        if(!this.sovrap(a, b, 3)) continue;
+        for(const [att, dif] of [[a, b], [b, a]]){
+          if(att.kind === 'veliti') continue;
+          const ox = Math.min(att.x + att.w / 2, dif.x + dif.w / 2) - Math.max(att.x - att.w / 2, dif.x - dif.w / 2);
+          const oy = Math.min(att.y + att.d / 2, dif.y + dif.d / 2) - Math.max(att.y - att.d / 2, dif.y - dif.d / 2);
+          // posizione dell'attaccante rispetto al difensore
+          let rel;
+          if(ox > 8) rel = ((att.y - dif.y) * dif.dir > 0) ? 'fronte' : 'retro';
+          else if(oy > Math.min(att.d, dif.d) * 0.4) rel = 'fianco';
+          else continue; // solo uno spigolo: nessun vero contatto
+          a.contatto = b.contatto = true;
+          // e del difensore rispetto all'attaccante (la falange colpisce solo davanti)
+          let relA = (ox > 8 && (dif.y - att.y) * att.dir > 0) ? 'fronte' : 'altro';
+          const L = rel === 'fianco' ? Math.max(6, oy) : Math.max(6, ox);
+          let pot = att.att * (0.35 + 0.65 * att.coh) * (1 - 0.45 * att.fat) * L * P.K * Math.sqrt(att.men / att.max + 0.05);
+          if(att.kind === 'falange' && relA !== 'fronte') pot *= 0.25;
+          if(att.kind === 'sanniti' && rel !== 'fronte') pot *= 1.25;
+          let def = rel === 'fronte' ? dif.defF * (0.35 + 0.65 * dif.coh) : (rel === 'fianco' ? dif.defS : dif.defS * 0.75);
+          let mult = rel === 'fronte' ? 1 : (rel === 'fianco' ? 1.7 : 2.1);
+          const perdita = pot * mult / def;
+          add(dif, 'm', perdita); add(dif, 'c', perdita / dif.max * 1.15 + (rel !== 'fronte' ? 0.0035 : 0));
+          if(rel !== 'fronte'){ this.stat.fianco[att.side] += perdita; if(perdita > 0.5) this.evento('fianco' + att.side + dif.kind, att.side === 'R' ? `I Romani colpiscono il nemico sul fianco: è il momento più pericoloso per chi lo subisce.` : `Il nemico prende i Romani sul fianco!`); }
+          // spinta della falange
+          if(att.kind === 'falange' && rel === 'fronte' && relA === 'fronte'){
+            const pd = dif.att * (0.35 + 0.65 * dif.coh) * (1 - 0.45 * dif.fat) * L * P.K / (att.defF * (0.35 + 0.65 * att.coh));
+            if(perdita > pd * 1.15){ dif.spinta = (dif.spinta || 0) + 0.16; att.avanzaSpinta = 0.16; }
+          }
+        }
+      }
+    }
+    for(const [u, d] of danni){ u.men = Math.max(0, u.men - d.m); u.coh = Math.max(0, u.coh - d.c); u.fat = Math.min(1, u.fat + P.fatRate); }
+
+    /* ---- falange: movimento di gruppo ---- */
+    for(const g of this.groups){
+      const segs = g.segs.filter(s => !s.fuga);
+      if(!segs.length) continue;
+      const ys = segs.map(s => s.y).sort((a, b) => a - b); const med = ys[ys.length >> 1];
+      const ingaggio = segs.some(s => s.contatto);
+      if(!ingaggio){ g.y += g.dir * 0.42; if((g.y - med) * g.dir > 18) g.y = med + g.dir * 18; }
+      else { const eng = segs.filter(x => x.contatto).map(x => x.y); g.y = g.dir > 0 ? Math.max(...eng) : Math.min(...eng); }
+      for(const s of segs){
+        const r = rough(T, s.x, s.y + s.dir * s.d / 2);
+        let tx = g.x + s.slot * 52; const lo = T.xL(s.y) + s.w / 2 + 2, hi = T.xR(s.y) - s.w / 2 - 2;
+        if(tx < lo || tx > hi){ tx = Math.min(hi, Math.max(lo, tx)); }
+        const vmax = s.sp * (1 - s.rp * r);
+        // spostamento laterale (lento: la falange è rigida)
+        let ddx = Math.max(-0.25, Math.min(0.25, tx - s.x));
+        let ddy = 0;
+        if(!s.contatto){ const diff = (g.y - s.y) * s.dir; ddy = s.dir * Math.max(0, Math.min(vmax, diff)); }
+        else if(s.avanzaSpinta){ ddy = s.dir * s.avanzaSpinta; }
+        s.avanzaSpinta = 0;
+        if(s.spinta){ ddy += -s.dir * s.spinta; s.spinta = 0; }
+        if(s.escT > 0){ s.escT--; ddx = s.esc * 0.45; }
+        if(this.libero(s, s.x + ddx, s.y + ddy)){ s.x += ddx; s.y += ddy; }
+        else if(ddy !== 0 && !s.contatto){ // un ostacolo davanti: il reparto deve deviare e perde l'ordine
+          if(!(s.escT > 0)){
+            // sceglie il lato libero più vicino
+            let lato = 0;
+            for(let k = 1; k <= 80 && !lato; k++){ if(this.libero(s, s.x + k, s.y + ddy * 4)) lato = 1; else if(this.libero(s, s.x - k, s.y + ddy * 4)) lato = -1; }
+            s.esc = lato || 1; s.escT = 50;
+          }
+          if(this.libero(s, s.x + s.esc * 0.45, s.y)) s.x += s.esc * 0.45;
+          else if(this.libero(s, s.x + s.esc * 0.45, s.y - s.dir * 0.6)){ s.x += s.esc * 0.45; s.y -= s.dir * 0.6; }
+          if(s.coh > 0.42) s.coh -= 0.0006;
+        }
+        else if(this.libero(s, s.x, s.y + ddy)) s.y += ddy;
+        // perdita di compattezza: terreno, allineamento
+        const mis = Math.abs(s.y - med);
+        if(s.coh > 0.42) s.coh -= 0.0007 * r + Math.min(0.0008, 0.00001 * Math.max(0, mis - 6));
+        if(r < 0.05 && mis < 8 && !s.contatto) s.coh = Math.min(1, s.coh + P.cohRec);
+        s.fat = Math.max(0, s.fat - (s.contatto ? 0 : P.fatRec * 0.5));
+      }
+      // compressione e varchi tra segmenti vicini
+      const ord = segs.slice().sort((a, b) => a.x - b.x);
+      for(let k = 0; k + 1 < ord.length; k++){
+        const a = ord[k], b = ord[k + 1]; const dx = b.x - a.x, dy = Math.abs(b.y - a.y);
+        if(dx < a.w * 0.9){ if(a.coh > 0.42) a.coh -= 0.0005; if(b.coh > 0.42) b.coh -= 0.0005; this.stat.schiacciati++; this.evento('stretta' + g.side, `La falange ${g.side === 'R' ? 'romana' : 'nemica'} è schiacciata dalle pareti della valle: le file si pressano e perdono l'ordine.`); }
+        if(dx > a.w * 1.35 || dy > a.d * 0.7){ a.varco = b.varco = true; if(!this['v' + k + g.side]){ this['v' + k + g.side] = 1; this.stat.varchi++; }
+          this.evento('varco' + g.side, this.T.kind === 'aspro' ? `Si apre un varco nella falange ${g.side === 'R' ? 'romana' : 'nemica'}: sul terreno accidentato le file non riescono a restare allineate.` : `Nella mischia la falange ${g.side === 'R' ? 'romana' : 'nemica'} si scompone in un punto: si apre un piccolo varco.`); }
+      }
+      for(const s of segs) s.coh = Math.max(0, Math.min(1, s.coh));
+    }
+
+    /* ---- legione e sanniti ---- */
+    const attivi = side => units.filter(u => u.side === side && !u.fuga && !u.via && ['hastati', 'principes', 'triarii'].includes(u.kind) && (u.state === 'avanza'));
+    for(const u of units){
+      if(u.fuga || u.via || u.kind === 'falange') continue;
+      const r = rough(T, u.x, u.y + u.dir * u.d / 2); const v = u.sp * (1 - u.rp * r);
+      const nem = this.nemici(u);
+      if(!nem.length) continue;
+      // nemico più vicino
+      let best = null, bd = 1e9; for(const e of nem){ if(e.kind === 'veliti') continue; const d = Math.hypot(e.x - u.x, e.y - u.y); if(d < bd){ bd = d; best = e; } }
+      if(!best) continue;
+      if(u.kind === 'veliti'){
+        if(u.state === 'avanza'){
+          const fronteNem = best.y - best.dir * 0; const dist = Math.abs(best.y - u.y) - best.d / 2;
+          if(dist > 85) this.muovi(u, 0, u.dir * v); else { u.state = 'lancio'; u.lt = 0; this.evento('veliti' + u.side, 'I veliti si avvicinano e lanciano i giavellotti contro le prime file nemiche.'); }
+        } else if(u.state === 'lancio'){
+          u.lt++; const tgt = best; const dist = Math.hypot(tgt.x - u.x, tgt.y - u.y);
+          if(dist < 140){ tgt.men = Math.max(0, tgt.men - 0.012); tgt.coh -= 0.00025 * (tgt.kind === 'falange' ? 1.2 : 1); if(this.t % 6 === 0) this.jav.push({ x: u.x, y: u.y, tx: tgt.x + (this.R() - 0.5) * 30, ty: tgt.y, t: 0 }); }
+          if(u.lt > 170 || dist < 45){ u.state = 'ritiro'; this.evento('velitiRit' + u.side, 'I veliti si ritirano negli spazi tra i manipoli: ora tocca agli hastati.'); }
+        } else if(u.state === 'ritiro'){
+          u.y -= u.dir * 1.3; if(u.y > H + 30 || u.y < -30) u.via = true;
+        }
+        continue;
+      }
+      if(u.kind === 'sanniti'){
+        // cercano il fianco scoperto
+        let tx = best.x, ty = best.y - best.dir * 0; let fianco = false;
+        for(const lato of [-1, 1]){
+          const fx = best.x + lato * (best.w / 2 + u.w / 2 + 2), fy = best.y;
+          const occupato = this.units.some(o => o.side === best.side && o !== best && !o.fuga && !o.via && Math.abs(o.x - fx) < (o.w + u.w) / 2 && Math.abs(o.y - fy) < (o.d + u.d) / 2);
+          if(!occupato && !blocked(T, fx, fy) && Math.hypot(fx - u.x, fy - u.y) < bd + 60){ tx = fx; ty = fy; fianco = true; break; }
+        }
+        if(!fianco){ ty = best.y - best.dir * (best.d / 2 + u.d / 2 + 1) * -1; ty = best.y + best.dir * (best.d / 2 + u.d / 2) * 1; ty = best.y + (u.y > best.y ? 1 : -1) * (best.d / 2 + u.d / 2 + 1); }
+        if(!u.contatto){ const dx = tx - u.x, dy = ty - u.y, n = Math.hypot(dx, dy) || 1; this.muovi(u, dx / n * v, dy / n * v); }
+        u.fat = Math.max(0, u.fat - (u.contatto ? 0 : P.fatRec));
+        continue;
+      }
+      // manipoli
+      if(u.state === 'avanza'){
+        if(!u.contatto){
+          // c'è un nemico davanti nella propria corsia?
+          const davanti = nem.some(e => e.kind !== 'veliti' && Math.abs(e.x - u.x) < (e.w + u.w) / 2 - 4 && (e.y - u.y) * u.dir > 0);
+          let dx = 0, dy = u.dir * v;
+          if(!davanti){
+            // varco: cerca un fianco scoperto tra due reparti nemici; altrimenti va verso il nemico più vicino
+            let f = null, fd = 1e9;
+            for(const e of nem){ if(e.kind === 'veliti') continue;
+              for(const lato of [-1, 1]){
+                const fx = e.x + lato * (e.w / 2 + u.w / 2 + 1), fy = e.y;
+                const d = Math.hypot(fx - u.x, fy - u.y); if(d > 170 || d >= fd) continue;
+                const occ = this.units.some(o => o.side === e.side && o !== e && !o.fuga && !o.via && Math.abs(o.x - fx) < (o.w + u.w) / 2 && Math.abs(o.y - fy) < (o.d + u.d) / 2 + 4);
+                const interno = this.units.some(o => o.side === e.side && o !== e && !o.fuga && !o.via && o.kind !== 'veliti' && (o.x - e.x) * lato > 0 && Math.abs(o.x - e.x) < 150 && Math.abs(o.y - e.y) < 90);
+                if(!occ && interno && !blocked(this.T, fx, fy)){ f = [fx, fy]; fd = d; }
+              } }
+            if(!f && bd < 1e8){ f = [best.x, best.y - best.dir * 0 + (u.y > best.y ? 1 : -1) * (best.d / 2 + u.d / 2)]; }
+            if(f){ const ddx = f[0] - u.x, ddy = f[1] - u.y, n = Math.hypot(ddx, ddy) || 1; dx = ddx / n * v; dy = ddy / n * v; }
+          } else dx = Math.max(-0.25, Math.min(0.25, (u.lane - u.x) * 0.01));
+          // non superare i compagni davanti nella stessa corsia
+          const bloccoAmico = this.amici(u).some(o => o.kind !== 'veliti' && o.state === 'avanza' && Math.abs(o.x - u.x) < (o.w + u.w) / 2 && (o.y - u.y) * u.dir > 0 && Math.abs(o.y - u.y) < (o.d + u.d) / 2 + 6 && !o.fuga);
+          if(!bloccoAmico || !davanti) this.muovi(u, dx, bloccoAmico ? 0 : dy);
+        }
+        // stanchi o provati: ripiegano (cambio delle linee)
+        if(u.contatto && u.kind !== 'triarii' && (u.fat > 0.62 || u.coh < 0.42 || u.men < 0.52 * u.max)){
+          const riserve = units.some(o => o.side === u.side && !o.fuga && !o.via && (o.state === 'riserva' || this.pronto(o)));
+          if(riserve){ u.state = 'ritira'; if(!u.cambiato){ u.cambiato = 1; this.stat.cambi++; } this.evento('cambio' + u.side, `Gli ${u.kind === 'hastati' ? 'hastati' : 'principes'} stanchi ripiegano attraverso gli spazi della linea dietro: entrano truppe fresche.`); }
+        }
+      } else if(u.state === 'ritira'){
+        const meta = u.y0 - u.dir * 30; // dietro la linea dei principes
+        if((u.y - meta) * -u.dir < 0){ if(!this.muovi(u, 0, -u.dir * 0.7)) this.muovi(u, 0.7, 0); } else u.state = 'riposo';
+        u.fat = Math.max(0, u.fat - P.fatRec * 0.5);
+      } else if(u.state === 'riposo'){
+        u.fat = Math.max(0, u.fat - P.fatRec); u.coh = Math.min(1, u.coh + P.cohRec * 0.8);
+      } else if(u.state === 'riserva'){
+        // segue a distanza la linea davanti
+        const davanti = units.filter(o => o.side === u.side && !o.fuga && !o.via && o.state === 'avanza' && o.kind !== 'veliti');
+        if(davanti.length){ const fy = davanti.reduce((s, o) => s + o.y, 0) / davanti.length; const target = fy - u.dir * (u.kind === 'triarii' ? 120 : 62);
+          if((target - u.y) * u.dir > 1) this.muovi(u, 0, u.dir * v); }
+        // un nemico troppo vicino: entra in combattimento
+        if(nem.some(e => Math.hypot(e.x - u.x, e.y - u.y) < 45)) u.state = 'avanza';
+      }
+    }
+    // richiamo delle riserve: la prima linea deve avere 10 manipoli
+    for(const side of ['R', 'N']){
+      const att = attivi(side).length;
+      const manipoli = units.some(u => u.side === side && u.kind === 'hastati');
+      if(!manipoli) continue;
+      let manca = 10 - att;
+      if(manca > 0){
+        const pool = units.filter(u => u.side === side && !u.fuga && !u.via && ((u.state === 'riserva' && u.kind === 'principes') || this.pronto(u)))
+          .concat(units.filter(u => u.side === side && !u.fuga && !u.via && u.state === 'riserva' && u.kind === 'triarii'));
+        for(const u of pool){ if(manca <= 0) break; if(u.kind === 'triarii' && units.some(o => o.side === side && !o.fuga && !o.via && o.kind !== 'triarii' && o.kind !== 'veliti' && (o.state === 'riserva' || this.pronto(o)))) continue;
+          u.state = 'avanza'; manca--; if(u.kind === 'triarii') this.evento('triarii' + side, `«Res ad triarios rediit»: entrano in battaglia anche i triarii, l'ultima riserva.`); }
+      }
+    }
+    // separazione fra compagni (non falange)
+    for(let i = 0; i < units.length; i++){ const a = units[i]; if(a.fuga || a.via || a.kind === 'falange' || a.kind === 'veliti') continue;
+      for(let j = i + 1; j < units.length; j++){ const b = units[j]; if(b.fuga || b.via || b.side !== a.side || b.kind === 'falange' || b.kind === 'veliti') continue;
+        if((a.state === 'avanza') !== (b.state === 'avanza')) continue;
+        if(!this.sovrap(a, b, -1)) continue;
+        const ox = (a.w + b.w) / 2 - Math.abs(a.x - b.x), oy = (a.d + b.d) / 2 - Math.abs(a.y - b.y);
+        if(ox < oy){ const s = a.x < b.x ? -1 : 1; const m = Math.min(ox / 2 + 0.2, 1.2); if(this.libero(a, a.x + s * m, a.y)) a.x += s * m; if(this.libero(b, b.x - s * m, b.y)) b.x -= s * m; }
+        else { const s = a.y < b.y ? -1 : 1; const m = Math.min(oy / 2 + 0.2, 1.2); if(this.libero(a, a.x, a.y + s * m)) a.y += s * m; if(this.libero(b, b.x, b.y - s * m)) b.y -= s * m; }
+      }
+    }
+    // spinta subita dai manipoli
+    for(const u of units){ if(u.spinta && u.kind !== 'falange'){ if(this.libero(u, u.x, u.y - u.dir * u.spinta)) u.y -= u.dir * u.spinta; u.spinta = 0; } }
+
+    /* ---- morale e fuga ---- */
+    for(const u of units){
+      if(u.fuga || u.via) { if(u.fuga){ u.y -= u.dir * 1.6; u.x += (this.R() - 0.5) * 1.2; if(u.y < -40 || u.y > H + 40) u.via = true; } continue; }
+      if(u.kind === 'veliti') continue;
+      if(u.coh < 0.15 || u.men < 0.27 * u.max){
+        u.fuga = true; this.stat.fuga[u.side]++;
+        const nome = { falange: 'Un reparto della falange', hastati: 'Un manipolo di hastati', principes: 'Un manipolo di principes', triarii: 'Un manipolo di triarii', sanniti: 'Una banda di Sanniti' }[u.kind];
+        this.evento('fuga' + u.side, `${nome} ${u.side === 'R' ? 'romano' : 'nemico'} rompe le file e fugge. Il panico contagia chi gli sta vicino.`);
+        for(const o of units){ if(o.side === u.side && o !== u && !o.fuga && Math.hypot(o.x - u.x, o.y - u.y) < 80) o.coh -= o.kind === 'falange' ? 0.12 : 0.05; }
+      }
+    }
+    for(const j of this.jav) j.t += 0.04; this.jav = this.jav.filter(j => j.t < 1);
+
+    /* ---- fine ---- */
+    const fr = this.forza('R') / this.init.R, fn = this.forza('N') / this.init.N;
+    if(fr < 0.38 || fn < 0.38 || this.t > 6000){
+      let vince = fr < 0.38 && fn >= 0.38 ? 'N' : fn < 0.38 && fr >= 0.38 ? 'R' : (Math.abs(fr - fn) < 0.08 ? 'pari' : (fr > fn ? 'R' : 'N'));
+      if(fr < 0.38 && fn < 0.38) vince = fr > fn ? 'R' : 'N';
+      this.over = { vince, fr, fn, t: this.t };
+      this.log.push({ t: this.t, testo: vince === 'pari' ? 'Nessuno riesce a prevalere: la battaglia finisce in parità.' : vince === 'R' ? 'Il nemico è in rotta: vincono i Romani!' : 'I Romani sono in rotta: vince il nemico.' });
+    }
+  }
+}
+if(typeof module !== 'undefined') module.exports = { Battle, W, H, rough, blocked, P };
+
+{
+const cv=document.getElementById('cv'), ctx=cv.getContext('2d');
+const scelta={romani:'legione',nemico:'falange',terreno:'aperto'};
+let B=null, run=false, vel=2, seed=1, terrCache=null, terrKey='';
+const COL={R:{falange:'#b8432a',hastati:'#cf5a3b',principes:'#a23a22',triarii:'#7a2814',veliti:'#d8916f'},
+           N:{falange:'#2f5f86',sanniti:'#5e6b23'}};
+function colore(u){ return u.side==='R'?COL.R[u.kind]:(u.kind==='sanniti'?COL.N.sanniti:COL.N.falange); }
+function seg(id,key){ const el=document.getElementById(id); el.querySelectorAll('button').forEach(b=>{ b.classList.toggle('on',b.dataset.v===scelta[key]); b.onclick=()=>{ scelta[key]=b.dataset.v; seg(id,key); nuova(); }; }); }
+seg('c-rom','romani'); seg('c-nem','nemico'); seg('c-ter','terreno');
+document.querySelectorAll('.vel button').forEach(b=>{ b.classList.toggle('on',+b.dataset.s===vel); b.onclick=()=>{ vel=+b.dataset.s; document.querySelectorAll('.vel button').forEach(x=>x.classList.toggle('on',x===b)); }; });
+
+function nuova(){ seed=(Math.random()*1e9)|0; B=new Battle(Object.assign({seed},scelta)); run=false; document.getElementById('b-via').textContent='▶ Via!';
+  document.getElementById('ris').className='ris'; document.getElementById('log').innerHTML='<p>Premi «Via!» per cominciare.</p>'; legenda(); disegna(); pannello(); }
+document.getElementById('b-via').onclick=()=>{ if(!B||B.over){ nuova(); } run=!run; document.getElementById('b-via').textContent=run?'❚❚ Pausa':'▶ Riprendi'; };
+document.getElementById('b-reset').onclick=()=>{ nuova(); };
+
+function legenda(){
+  const r = scelta.romani==='falange' ? [['#b8432a','falange romana']] : [['#d8916f','veliti'],['#cf5a3b','hastati'],['#a23a22','principes'],['#7a2814','triarii']];
+  const n = scelta.nemico==='falange' ? [['#2f5f86','falange macedone']] : [['#5e6b23','bande sannite']];
+  let h=r.concat(n).map(([c,t])=>`<span><i class="sw" style="background:${c}"></i>${t}</span>`).join('');
+  if(scelta.terreno==='aspro') h+=`<span><i class="sw" style="background:#9b8a66"></i>terreno accidentato</span><span><i class="sw" style="background:#6d6457"></i>rocce e pareti</span>`;
+  document.getElementById('leg').innerHTML=h;
+}
+
+function terreno(){
+  const key=scelta.terreno; if(terrCache&&terrKey===key) return terrCache;
+  const c=document.createElement('canvas'); c.width=1000; c.height=700; const g=c.getContext('2d'); const T=B.T;
+  g.fillStyle=key==='aperto'?'#dfe2b8':'#d9d0ae'; g.fillRect(0,0,1000,700);
+  const R=(()=>{let s=9;return()=>((s=(s*16807)%2147483647)/2147483647);})();
+  for(let i=0;i<2600;i++){ const x=R()*1000,y=R()*700; g.fillStyle=key==='aperto'?`rgba(110,130,60,${0.08+R()*0.12})`:`rgba(120,100,60,${0.06+R()*0.1})`; g.fillRect(x,y,2,2+R()*3); }
+  if(key==='aspro'){
+    for(let y=0;y<=700;y+=2){ const l=T.xL(y), r=T.xR(y);
+      g.fillStyle='#8a7d68'; g.fillRect(0,y,l,2); g.fillRect(r,y,1000-r,2);
+      g.fillStyle='rgba(60,50,40,.25)'; g.fillRect(l-6,y,6,2); g.fillRect(r,y,6,2); }
+    for(let i=0;i<500;i++){ const y=R()*700, s=R()<0.5; const x=s? R()*T.xL(y) : T.xR(y)+R()*(1000-T.xR(y)); g.fillStyle=`rgba(50,40,30,${0.15+R()*0.2})`; g.beginPath(); g.arc(x,y,2+R()*5,0,7); g.fill(); }
+    for(const p of T.patches){ const gr=g.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r); gr.addColorStop(0,'rgba(120,100,70,.55)'); gr.addColorStop(1,'rgba(120,100,70,0)'); g.fillStyle=gr; g.beginPath(); g.arc(p.x,p.y,p.r,0,7); g.fill();
+      for(let k=0;k<26;k++){ const a=R()*6.28, d=R()*p.r*0.8; g.fillStyle='rgba(90,75,55,.5)'; g.beginPath(); g.arc(p.x+Math.cos(a)*d,p.y+Math.sin(a)*d,1.5+R()*2.5,0,7); g.fill(); } }
+    for(const k of T.rocks){ g.fillStyle='#6d6457'; g.beginPath(); g.arc(k.x,k.y,k.r,0,7); g.fill(); g.fillStyle='rgba(255,255,255,.25)'; g.beginPath(); g.arc(k.x-k.r*0.3,k.y-k.r*0.3,k.r*0.45,0,7); g.fill(); }
+  }
+  terrCache=c; terrKey=key; return c;
+}
+function hash(i){ const x=Math.sin(i*127.1)*43758.5453; return x-Math.floor(x); }
+function disegna(){
+  ctx.drawImage(terreno(),0,0);
+  ctx.font='600 15px -apple-system,Helvetica,sans-serif'; ctx.fillStyle='rgba(42,38,34,.55)'; ctx.textAlign='center';
+  ctx.fillText(scelta.nemico==='falange'?'MACEDONI':'SANNITI',500,22); ctx.fillText('ROMANI',500,690);
+  for(const u of B.units){ if(u.via) continue;
+    const n=Math.max(1,Math.ceil(u.men/5)), loose=u.kind==='sanniti'||u.kind==='veliti';
+    const cols=Math.max(1,Math.round(u.w/(loose?8:6))), rows=Math.ceil(Math.ceil(u.max/5)/cols);
+    const sx=u.w/cols, sy=u.d/Math.max(rows,1);
+    const dis=u.fuga?14:(1-u.coh)*7+(loose?2.2:0);
+    ctx.fillStyle=colore(u); ctx.globalAlpha=u.fuga?0.45:1;
+    for(let i=0;i<n;i++){ const c=i%cols, r=Math.floor(i/cols);
+      const x=u.x-u.w/2+(c+0.5)*sx+(hash(u.id*997+i)-0.5)*dis*2;
+      const y=u.y+u.dir*u.d/2-u.dir*(r+0.5)*sy+(hash(u.id*631+i*3)-0.5)*dis*2;
+      ctx.fillRect(x-1.9,y-1.9,3.8,3.8); }
+    if(u.kind==='falange'&&!u.fuga){ ctx.strokeStyle=colore(u); ctx.lineWidth=1; ctx.beginPath();
+      for(let c=0;c<cols;c+=1){ const x=u.x-u.w/2+(c+0.5)*sx, y=u.y+u.dir*u.d/2; ctx.moveTo(x,y); ctx.lineTo(x+(hash(c+u.id)-0.5)*2*(1-u.coh)*4,y+u.dir*11); } ctx.stroke(); }
+    if(u.contatto&&!u.fuga){ ctx.globalAlpha=0.5; ctx.fillStyle='#fff3c4'; ctx.fillRect(u.x-u.w/2,u.y+u.dir*u.d/2-1.5,u.w,3); }
+    ctx.globalAlpha=1;
+  }
+  ctx.strokeStyle='rgba(60,40,20,.7)'; ctx.lineWidth=1.2;
+  for(const j of B.jav){ const x=j.x+(j.tx-j.x)*j.t, y=j.y+(j.ty-j.y)*j.t; const a=Math.atan2(j.ty-j.y,j.tx-j.x); ctx.beginPath(); ctx.moveTo(x,y); ctx.lineTo(x-Math.cos(a)*9,y-Math.sin(a)*9); ctx.stroke(); }
+}
+let ultimoLog=0;
+function minuto(t){ return Math.round(t/40); }
+function pannello(){
+  const fR=B.forza('R')/B.init.R, fN=B.forza('N')/B.init.N, cR=B.coesione('R'), cN=B.coesione('N');
+  const nN=scelta.nemico==='falange'?'Macedoni':'Sanniti', cn=scelta.nemico==='falange'?'#2f5f86':'#5e6b23';
+  const riga=(t,v,c)=>`<div class="riga"><span>${t}</span><div class="tr"><i style="width:${Math.max(0,v*100).toFixed(0)}%;background:${c}"></i></div><span class="num">${Math.round(v*100)}%</span></div>`;
+  document.getElementById('forze').innerHTML=riga('Romani',fR,'#b8432a')+riga(nN,fN,cn)+
+    `<div style="height:6px"></div><div style="font:12px -apple-system,sans-serif;color:#6f655a;margin-bottom:6px">Compattezza delle file</div>`+riga('Romani',cR,'#e3a083')+riga(nN,cN,'#9cb3c9');
+  if(B.log.length!==ultimoLog){ ultimoLog=B.log.length; const el=document.getElementById('log');
+    el.innerHTML=B.log.slice().reverse().map(e=>`<p><time>min ${minuto(e.t)}</time>${e.testo}</p>`).join(''); }
+}
+function spiegazione(){
+  const o=B.over, s=B.stat, r=scelta.romani, n=scelta.nemico, t=scelta.terreno;
+  const chi = o.vince==='R'?'Vincono i Romani':o.vince==='N'?(n==='falange'?'Vincono i Macedoni':'Vincono i Sanniti'):'Parità';
+  const pts=[];
+  if(r==='falange'&&n==='falange') pts.push(t==='aperto'?'Due falangi una contro l\'altra si spingono a lungo, fronte contro fronte: vince chi resiste un po\' di più.':'Tutte e due le falangi si scompongono sul terreno accidentato: è una battaglia lenta e confusa.');
+  if(s.varchi>0&&t==='aspro') pts.push(`Sul terreno accidentato la falange ha perso l'allineamento: si sono aperti <b>${s.varchi} varchi</b> tra i suoi reparti.`);
+  if(s.schiacciati>200) pts.push('Nella valle stretta i reparti della falange sono stati schiacciati gli uni contro gli altri: un blocco rigido non può stringersi senza perdere l\'ordine.');
+  if(s.cambi>0) pts.push(`<b>${s.cambi} manipoli</b> hanno ceduto il posto almeno una volta: chi era stanco ripiegava e in prima linea entravano truppe fresche.`);
+  if(s.fianco.R>30&&r==='legione') pts.push('I manipoli, agili, sono entrati nei varchi e hanno colpito il nemico sul fianco, dove la falange non può difendersi.');
+  if(s.fianco.N>30&&n==='sanniti') pts.push('I Sanniti, guerrieri di montagna, si muovono veloci anche sul terreno difficile e cercano i fianchi scoperti.');
+  if(r==='legione'&&n==='falange'&&t==='aperto') pts.push('In pianura la falange macedone è fortissima nell\'urto frontale: le lance lunghe tengono lontani i Romani, anche se i cambi di linea li fanno resistere a lungo.');
+  if(r==='falange'&&n==='sanniti'&&t==='aperto') pts.push('In campo aperto il muro di scudi e lance della falange regge bene contro le bande sannite.');
+  if(r==='falange'&&n==='sanniti'&&t==='aspro') pts.push('È la lezione delle Forche Caudine: in montagna e nelle gole la falange romana è lenta e rigida, i Sanniti no. Per questo Roma passò ai manipoli.');
+  if(r==='legione'&&n==='falange'&&t==='aspro') pts.push('È ciò che accadde a Cinocefale (197) e a Pidna (168): appena il terreno spezza la falange, i manipoli si infilano nei varchi.');
+  if(r==='legione'&&n==='sanniti') pts.push('Con i manipoli Roma ha un esercito agile quanto i Sanniti, ma più ordinato e con riserve fresche.');
+  const pr=Math.round(o.fr*100), pn=Math.round(o.fn*100);
+  return `<h2 style="color:${o.vince==='R'?'#8f3d22':o.vince==='N'?'#2f5f86':'#6f655a'}">${chi}</h2>
+  <div style="font:14px -apple-system,sans-serif;color:#6f655a">Forze rimaste: Romani ${pr}% · ${n==='falange'?'Macedoni':'Sanniti'} ${pn}% · durata circa ${minuto(o.t)} minuti</div>
+  <ul>${pts.map(p=>`<li>${p}</li>`).join('')}</ul>
+  <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap"><button class="btn" onclick="document.getElementById('b-reset').click();document.getElementById('b-via').click()">Rigioca</button><button class="btn sec" onclick="document.getElementById('ris').className='ris'">Chiudi</button></div>`;
+}
+function ciclo(){
+  if(run&&B&&!B.over){ for(let i=0;i<vel;i++){ B.step(); if(B.over) break; } disegna(); pannello();
+    if(B.over){ run=false; document.getElementById('b-via').textContent='▶ Nuova battaglia'; const r=document.getElementById('ris'); r.innerHTML=spiegazione(); r.className='ris on'; } }
+  requestAnimationFrame(ciclo);
+}
+nuova(); ciclo();
+window.__B=()=>B; window.__nuova=(o)=>{ Object.assign(scelta,o); seg('c-rom','romani'); seg('c-nem','nemico'); seg('c-ter','terreno'); nuova(); };
+window.__avanza=(n)=>{ for(let i=0;i<n&&!B.over;i++) B.step(); disegna(); pannello(); if(B.over){ const r=document.getElementById('ris'); r.innerHTML=spiegazione(); r.className='ris on'; } };
+}
+</script>
+</body>
+</html>
