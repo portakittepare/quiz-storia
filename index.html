@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Quiz Storia">
+<meta name="theme-color" content="#f6efe3">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="icon" href="data:image/png;base64,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">
+<title>Quiz di storia – Roma e le guerre puniche</title>
+<style>
+:root{
+  --bg:#f6efe3; --card:#fffdf8; --ink:#2a2622; --soft:#7a6f63; --line:#e6dccb;
+  --terra:#b5502f; --terra-d:#8f3d22; --blu:#2f5d7c; --ok:#3f8f5a; --mid:#d39a1f; --ko:#c2463a;
+}
+*{box-sizing:border-box; -webkit-tap-highlight-color:transparent;}
+html,body{margin:0; height:100%;}
+body{
+  background:var(--bg); color:var(--ink);
+  font-family: "Iowan Old Style", "Palatino", "Book Antiqua", Georgia, serif;
+  padding: max(16px, env(safe-area-inset-top)) max(16px, env(safe-area-inset-right)) max(20px, env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
+  -webkit-user-select:none; user-select:none;
+}
+.wrap{max-width:820px; margin:0 auto;}
+header{display:flex; align-items:center; gap:12px; margin-bottom:10px;}
+header .titolo{font-size:15px; letter-spacing:.12em; text-transform:uppercase; color:var(--terra-d); font-family:-apple-system, "Helvetica Neue", sans-serif; font-weight:700;}
+.screen{display:none;}
+.screen.on{display:block; animation:fade .35s ease;}
+@keyframes fade{from{opacity:0; transform:translateY(6px)} to{opacity:1; transform:none}}
+.card{background:var(--card); border:1px solid var(--line); border-radius:22px; padding:22px; box-shadow:0 2px 0 var(--line);}
+h1{font-size:34px; line-height:1.1; margin:6px 0 6px; color:var(--terra-d);}
+.lead{color:var(--soft); font-size:18px; margin:0 0 18px;}
+.ui{font-family:-apple-system, "Helvetica Neue", sans-serif;}
+.label{font-family:-apple-system, "Helvetica Neue", sans-serif; font-size:13px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--soft); margin:18px 0 8px;}
+.chips{display:flex; flex-wrap:wrap; gap:8px;}
+.chip{font-family:-apple-system, "Helvetica Neue", sans-serif; font-size:16px; border:2px solid var(--line); background:#fff; color:var(--ink); padding:10px 14px; border-radius:999px; cursor:pointer;}
+.chip.on{border-color:var(--terra); background:#fbe9df; color:var(--terra-d); font-weight:700;}
+.btn{font-family:-apple-system, "Helvetica Neue", sans-serif; font-size:19px; font-weight:700; border:none; border-radius:16px; padding:16px 22px; cursor:pointer; background:var(--terra); color:#fff; box-shadow:0 4px 0 var(--terra-d); }
+.btn:active{transform:translateY(3px); box-shadow:0 1px 0 var(--terra-d);}
+.btn.sec{background:#fff; color:var(--blu); border:2px solid var(--blu); box-shadow:0 4px 0 #c9d6e0;}
+.btn.sec:active{box-shadow:0 1px 0 #c9d6e0;}
+.btn.wide{width:100%;}
+.btn:disabled{opacity:.4;}
+.row{display:flex; gap:10px; flex-wrap:wrap; margin-top:18px;}
+.hero{display:flex; align-items:center; gap:18px;}
+.hero .lupo{width:150px; flex:none;}
+.lupo svg{width:100%; height:auto; display:block;}
+.storico{font-family:-apple-system, "Helvetica Neue", sans-serif; font-size:14px; color:var(--soft); margin-top:16px; line-height:1.6;}
+
+/* domanda */
+.top{display:flex; align-items:center; gap:12px; margin-bottom:12px;}
+.bar{flex:1; height:12px; background:#eadfcd; border-radius:99px; overflow:hidden;}
+.bar i{display:block; height:100%; width:0; background:linear-gradient(90deg,var(--terra),#d27a4f); border-radius:99px; transition:width .4s;}
+.count{font-family:-apple-system, "Helvetica Neue", sans-serif; font-weight:700; color:var(--soft); font-size:15px; min-width:62px; text-align:right;}
+.topic{font-family:-apple-system, "Helvetica Neue", sans-serif; font-size:12px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--blu); margin-bottom:6px;}
+.q{font-size:25px; line-height:1.3; margin:0 0 16px;}
+.opts{display:grid; gap:10px;}
+.opt{display:flex; gap:12px; align-items:center; text-align:left; width:100%; font-family:inherit; font-size:20px; line-height:1.3; background:#fff; color:var(--ink); border:2px solid var(--line); border-radius:16px; padding:14px 16px; cursor:pointer; min-height:62px;}
+.opt .k{flex:none; width:34px; height:34px; border-radius:50%; background:#f1e7d8; color:var(--terra-d); font-family:-apple-system, "Helvetica Neue", sans-serif; font-weight:800; display:flex; align-items:center; justify-content:center; font-size:16px;}
+.opt.ok{border-color:var(--ok); background:#e7f4ea;}
+.opt.ok .k{background:var(--ok); color:#fff;}
+.opt.ko{border-color:var(--ko); background:#fbe7e4;}
+.opt.ko .k{background:var(--ko); color:#fff;}
+.opt.dim{opacity:.5;}
+.opt:disabled{cursor:default;}
+.hintbox{font-family:-apple-system, "Helvetica Neue", sans-serif; margin-top:12px; font-size:16px; color:#6b5520; background:#fdf3d7; border:1px dashed #e0c472; border-radius:12px; padding:10px 12px; display:none;}
+.feedback{display:none; margin-top:16px; align-items:flex-start; gap:14px; border-radius:18px; padding:14px; border:2px solid var(--line); background:#fff;}
+.feedback.on{display:flex; animation:fade .3s ease;}
+.feedback .lupo{width:110px; flex:none;}
+.feedback .msg{font-family:-apple-system, "Helvetica Neue", sans-serif; font-weight:800; font-size:20px; margin-bottom:4px;}
+.feedback .exp{font-size:17px; line-height:1.4;}
+.feedback.bene{border-color:var(--ok);} .feedback.bene .msg{color:var(--ok);}
+.feedback.cosi{border-color:var(--mid);} .feedback.cosi .msg{color:#a2740f;}
+.feedback.male{border-color:var(--ko);} .feedback.male .msg{color:var(--ko);}
+
+/* risultati */
+.score{font-size:58px; font-weight:800; color:var(--terra-d); line-height:1; font-family:-apple-system, "Helvetica Neue", sans-serif;}
+.score small{font-size:22px; color:var(--soft);}
+.tally{font-family:-apple-system, "Helvetica Neue", sans-serif; display:flex; gap:10px; margin:12px 0 4px; flex-wrap:wrap;}
+.tally span{padding:6px 12px; border-radius:99px; font-weight:700; font-size:15px;}
+.t-b{background:#e7f4ea; color:var(--ok);} .t-c{background:#fdf3d7; color:#a2740f;} .t-m{background:#fbe7e4; color:var(--ko);}
+.err{border-top:1px solid var(--line); padding:12px 0; font-size:17px; line-height:1.4;}
+.err b{color:var(--ok);}
+.err .tu{color:var(--ko);}
+
+/* animazioni lupo */
+.anim-bene{animation:salta .7s ease 2;}
+.anim-cosi{animation:dondola 1s ease 1;}
+.anim-male{animation:giu .8s ease 1;}
+.anim-ciao{animation:dondola 2.4s ease-in-out infinite;}
+@keyframes salta{0%,100%{transform:translateY(0)} 40%{transform:translateY(-14px)} 60%{transform:translateY(0)} 75%{transform:translateY(-5px)}}
+@keyframes dondola{0%,100%{transform:rotate(0)} 25%{transform:rotate(-6deg)} 75%{transform:rotate(6deg)}}
+@keyframes giu{0%{transform:translateY(0)} 50%{transform:translateY(6px) scale(.97)} 100%{transform:translateY(2px)}}
+@media (max-width:560px){ h1{font-size:28px} .q{font-size:21px} .opt{font-size:18px} .hero .lupo{width:110px} .feedback .lupo{width:80px} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header><span class="titolo">Storia · Roma repubblicana</span></header>
+
+  <!-- INIZIO -->
+  <section id="s-inizio" class="screen on">
+    <div class="card">
+      <div class="hero">
+        <div class="lupo anim-ciao" id="lupo-inizio"></div>
+        <div>
+          <h1>Ciao Nora!</h1>
+          <p class="lead">Sono il lupetto della storia. Vediamo quanto ne sai di Roma, Cartagine e Annibale?</p>
+        </div>
+      </div>
+      <div class="label">Argomento</div>
+      <div class="chips" id="c-arg"></div>
+      <div class="label">Quante domande</div>
+      <div class="chips" id="c-num"></div>
+      <div class="row"><button class="btn wide" id="b-via">Inizia il quiz</button></div>
+      <div class="storico" id="storico"></div>
+    </div>
+  </section>
+
+  <!-- DOMANDA -->
+  <section id="s-domanda" class="screen">
+    <div class="top">
+      <button class="chip" id="b-esci" aria-label="Torna all'inizio">✕</button>
+      <div class="bar"><i id="bar"></i></div>
+      <div class="count" id="count"></div>
+    </div>
+    <div class="card">
+      <div class="topic" id="topic"></div>
+      <p class="q" id="q"></p>
+      <div class="opts" id="opts"></div>
+      <div class="hintbox" id="hint"></div>
+      <div class="row" id="r-hint"><button class="btn sec" id="b-hint">💡 Aiutino</button></div>
+      <div class="feedback" id="fb">
+        <div class="lupo" id="lupo-fb"></div>
+        <div><div class="msg" id="fb-msg"></div><div class="exp" id="fb-exp"></div></div>
+      </div>
+      <div class="row"><button class="btn wide" id="b-avanti" style="display:none">Avanti →</button></div>
+    </div>
+  </section>
+
+  <!-- RISULTATI -->
+  <section id="s-fine" class="screen">
+    <div class="card">
+      <div class="hero">
+        <div class="lupo" id="lupo-fine"></div>
+        <div>
+          <div class="score" id="score"></div>
+          <div class="ui" style="font-size:22px; font-weight:800; margin-top:6px" id="giudizio"></div>
+          <div class="tally" id="tally"></div>
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn" id="b-errori">Ripassa gli errori</button>
+        <button class="btn sec" id="b-nuovo">Nuovo quiz</button>
+      </div>
+      <div class="label" id="l-err">Da ripassare</div>
+      <div id="errori"></div>
+    </div>
+  </section>
+</div>
+
+<script>
+/* ---------- Il lupetto: 4 espressioni ---------- */
+function lupo(umore){
+  // umore: 'ciao' | 'bene' | 'cosi' | 'male'
+  const pelo='#8d97a6', peloS='#6f7a8a', crema='#f4eee4', rosa='#f2b3b8', occhio='#2b2b33';
+  let orecchie, occhi, sopracciglia='', bocca, extra='';
+  const oreSu = `
+    <path d="M52 70 L40 14 L92 48 Z" fill="${peloS}"/><path d="M58 60 L50 28 L82 50 Z" fill="${rosa}"/>
+    <path d="M148 70 L160 14 L108 48 Z" fill="${peloS}"/><path d="M142 60 L150 28 L118 50 Z" fill="${rosa}"/>`;
+  const oreGiu = `
+    <path d="M56 66 L14 40 L86 46 Z" fill="${peloS}"/><path d="M58 58 L28 44 L78 49 Z" fill="${rosa}"/>
+    <path d="M144 66 L186 40 L114 46 Z" fill="${peloS}"/><path d="M142 58 L172 44 L122 49 Z" fill="${rosa}"/>`;
+  const oreStorte = `
+    <path d="M52 70 L40 14 L92 48 Z" fill="${peloS}"/><path d="M58 60 L50 28 L82 50 Z" fill="${rosa}"/>
+    <path d="M146 68 L178 30 L112 46 Z" fill="${peloS}"/><path d="M140 59 L164 36 L120 49 Z" fill="${rosa}"/>`;
+  const occhiTondi = `
+    <circle cx="76" cy="98" r="9" fill="${occhio}"/><circle cx="79" cy="95" r="3" fill="#fff"/>
+    <circle cx="124" cy="98" r="9" fill="${occhio}"/><circle cx="127" cy="95" r="3" fill="#fff"/>`;
+  if(umore==='bene'){
+    orecchie=oreSu;
+    occhi=`<path d="M64 100 Q76 84 88 100" stroke="${occhio}" stroke-width="6" fill="none" stroke-linecap="round"/>
+           <path d="M112 100 Q124 84 136 100" stroke="${occhio}" stroke-width="6" fill="none" stroke-linecap="round"/>`;
+    bocca=`<path d="M80 138 Q100 168 120 138 Z" fill="#7a2e33"/><path d="M90 150 Q100 162 110 150 Q100 146 90 150 Z" fill="#f08a96"/>`;
+    extra=`<ellipse cx="62" cy="122" rx="9" ry="6" fill="${rosa}" opacity=".8"/><ellipse cx="138" cy="122" rx="9" ry="6" fill="${rosa}" opacity=".8"/>
+      <path d="M22 72 l4 10 l10 4 l-10 4 l-4 10 l-4 -10 l-10 -4 l10 -4 Z" fill="#f2c14e"/>
+      <path d="M176 92 l3 7 l7 3 l-7 3 l-3 7 l-3 -7 l-7 -3 l7 -3 Z" fill="#f2c14e"/>
+      <path d="M170 20 l3 7 l7 3 l-7 3 l-3 7 l-3 -7 l-7 -3 l7 -3 Z" fill="#f2c14e"/>`;
+  } else if(umore==='cosi'){
+    orecchie=oreStorte;
+    occhi=occhiTondi;
+    sopracciglia=`<path d="M64 82 L88 84" stroke="${peloS}" stroke-width="5" stroke-linecap="round"/>
+                  <path d="M112 80 L136 72" stroke="${peloS}" stroke-width="5" stroke-linecap="round"/>`;
+    bocca=`<path d="M84 146 Q92 140 100 146 T116 144" stroke="#4a3a3a" stroke-width="4.5" fill="none" stroke-linecap="round"/>`;
+    extra=`<text x="160" y="58" font-family="-apple-system,Helvetica,sans-serif" font-size="30" font-weight="800" fill="#d39a1f">?</text>`;
+  } else if(umore==='male'){
+    orecchie=oreGiu;
+    occhi=`<circle cx="76" cy="102" r="8" fill="${occhio}"/><circle cx="78" cy="99" r="2.6" fill="#fff"/>
+           <circle cx="124" cy="102" r="8" fill="${occhio}"/><circle cx="126" cy="99" r="2.6" fill="#fff"/>`;
+    sopracciglia=`<path d="M62 90 L86 82" stroke="${peloS}" stroke-width="5" stroke-linecap="round"/>
+                  <path d="M138 90 L114 82" stroke="${peloS}" stroke-width="5" stroke-linecap="round"/>`;
+    bocca=`<path d="M84 152 Q100 136 116 152" stroke="#4a3a3a" stroke-width="5" fill="none" stroke-linecap="round"/>`;
+    extra=`<path d="M128 112 Q122 124 128 130 Q134 124 128 112 Z" fill="#7cc3ea"/>`;
+  } else { // ciao
+    orecchie=oreSu;
+    occhi=occhiTondi;
+    bocca=`<path d="M86 142 Q100 154 114 142" stroke="#4a3a3a" stroke-width="4.5" fill="none" stroke-linecap="round"/>`;
+    extra=`<ellipse cx="62" cy="122" rx="8" ry="5" fill="${rosa}" opacity=".6"/><ellipse cx="138" cy="122" rx="8" ry="5" fill="${rosa}" opacity=".6"/>`;
+  }
+  return `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="lupetto ${umore}">
+    ${orecchie}
+    <path d="M100 40 C140 40 168 66 170 104 C172 136 156 162 130 174 L100 186 L70 174 C44 162 28 136 30 104 C32 66 60 40 100 40 Z" fill="${pelo}"/>
+    <path d="M34 112 L18 120 L38 124 Z" fill="${pelo}"/><path d="M166 112 L182 120 L162 124 Z" fill="${pelo}"/>
+    <path d="M100 66 C112 66 116 86 118 100 C138 104 150 120 146 140 C140 166 116 178 100 180 C84 178 60 166 54 140 C50 120 62 104 82 100 C84 86 88 66 100 66 Z" fill="${crema}"/>
+    ${sopracciglia}${occhi}
+    <path d="M90 124 Q100 118 110 124 Q108 134 100 136 Q92 134 90 124 Z" fill="#2b2b33"/>
+    <path d="M100 136 L100 142" stroke="#4a3a3a" stroke-width="3" stroke-linecap="round"/>
+    ${bocca}${extra}
+  </svg>`;
+}
+function metti(id, umore, anim){
+  const el=document.getElementById(id);
+  el.innerHTML=lupo(umore);
+  el.classList.remove('anim-bene','anim-cosi','anim-male','anim-ciao');
+  void el.offsetWidth;
+  if(anim) el.classList.add('anim-'+anim);
+}
+
+/* ---------- Domande: [argomento, domanda, giusta, [sbagliate], aiutino, spiegazione] ---------- */
+const ARG = {
+  R:'Repubblica, patrizi e plebei',
+  I:'Roma conquista l’Italia',
+  C:'Cartagine e Prima guerra punica',
+  A:'Seconda guerra punica',
+  O:'Oriente e Terza guerra punica',
+  X:'Curiosità (riquadri «In più»)'
+};
+const D = [
+['R','In che anno, secondo la tradizione, Roma diventa una repubblica?','509 a.C.',['753 a.C.','494 a.C.','451 a.C.'],'È poco prima del 500 a.C.','Nel 509 a.C., cacciato Tarquinio il Superbo, Roma diventa una repubblica aristocratica.'],
+['R','Secondo la leggenda, chi furono i primi due consoli?','Lucio Giunio Bruto e Lucio Tarquinio Collatino',['Romolo e Remo','Menenio Agrippa e Spurio Cassio','Furio Camillo e Fabio Massimo'],'Uno dei due era il marito di Lucrezia.','I capi della rivolta contro i Tarquini furono Bruto e Collatino, marito di Lucrezia.'],
+['R','Che cosa pensano oggi gli storici del passaggio dalla monarchia alla repubblica?','Fu graduale: il potere del re fu svuotato poco a poco',['Avvenne in un solo giorno con una rivoluzione','Lo impose Cartagine','Fu deciso dai plebei'],'Non fu un colpo di scena improvviso.','Oggi si pensa a uno svuotamento progressivo del potere regio; i patrizi, contrari alle guerre continue, deposero i re etruschi.'],
+['R','Su quali tre elementi si basava lo Stato repubblicano?','Senato, magistrature, assemblee dei cittadini',['Re, Senato, esercito','Consoli, tribuni, sacerdoti','Patrizi, plebei, schiavi'],'Uno di questi è formato da circa 300 persone.','Senato, magistrature e assemblee sono i tre pilastri della repubblica.'],
+['R','Quanti erano, circa, i senatori?','300',['100','193','500'],'Lo stesso numero del Consiglio degli anziani di Cartagine.','Il Senato contava circa 300 senatori delle famiglie aristocratiche, in carica a vita.'],
+['R','Il parere del Senato (senatus consultum) era…','legalmente non vincolante, ma quasi sempre seguito',['vincolante per legge','valido solo in tempo di guerra','votato dai plebei'],'Formalmente il Senato era «consultivo».','Il parere non obbligava, ma veniva seguito: anche perché i magistrati speravano di diventare senatori.'],
+['R','Come erano le magistrature romane?','Elettive, gratuite, collegiali e temporanee',['Ereditarie, pagate e a vita','Nominate dal re e individuali','Elettive, pagate e individuali'],'Quattro aggettivi: nessuno a vita, nessuno da solo.','Elettive, gratuite (non retribuite), collegiali (almeno due) e temporanee.'],
+['R','Perché il fatto che le cariche fossero gratuite favoriva i patrizi?','Solo i ricchi potevano lasciare il lavoro per fare politica',['Perché i patrizi non pagavano tasse','Perché i plebei non sapevano leggere','Perché lo diceva la legge delle XII Tavole'],'Pensa a chi doveva lavorare per vivere.','La gratuità assicurava ai patrizi il controllo delle magistrature: gli altri non potevano abbandonare il proprio lavoro.'],
+['R','Che cosa significa che i consoli erano «eponimi»?','L’anno prendeva il loro nome',['Erano eletti a vita','Erano sempre fratelli','Comandavano solo la flotta'],'Come uno degli arconti di Atene.','L’anno in cui governavano era indicato con il nome dei due consoli.'],
+['R','Che cos’era la «provocatio ad populum»?','Il diritto del cittadino condannato di appellarsi al giudizio dei comizi',['Una guerra contro un popolo vicino','La convocazione del Senato','Il censimento della popolazione'],'Serviva a limitare il potere dei consoli.','Contro una condanna del console, il cittadino poteva appellarsi ai comizi: la consuetudine divenne legge.'],
+['R','Quanto durava al massimo la dittatura?','Sei mesi',['Un anno','Cinque anni','A vita'],'Meno di un anno.','Il dittatore era una magistratura straordinaria, per una durata massima di sei mesi.'],
+['R','Chi si occupava del censimento e rivedeva le liste dei senatori?','I censori',['I questori','I pretori','Gli edili'],'La parola stessa te lo suggerisce.','I censori, eletti ogni cinque anni, dividevano i cittadini in classi, sorvegliavano la morale pubblica e rivedevano le liste dei senatori.'],
+['R','Chi gestiva le finanze e l’erario pubblico?','I questori',['I censori','Gli edili','I tribuni della plebe'],'Da due arrivarono a circa quaranta.','I questori gestivano le risorse finanziarie e pagavano gli stipendi di esercito e funzionari.'],
+['R','Chi amministrava la giustizia?','I pretori',['I questori','Gli edili','I censori'],'Potevano anche emanare nuove norme giuridiche.','I pretori amministravano la giustizia e interpretavano le leggi.'],
+['R','Di che cosa si occupavano gli edili?','Mercati, rifornimenti, opere pubbliche, spettacoli e ordine pubblico',['Delle finanze dello Stato','Dei culti religiosi','Del comando dell’esercito'],'Strade, edifici, mercati…','Gli edili sovrintendevano a mercati, approvvigionamento, opere pubbliche, spettacoli e ordine pubblico.'],
+['R','Nei comizi centuriati, perché i più ricchi controllavano il voto?','Avevano 98 centurie su 193, e ogni centuria valeva un voto',['Perché votavano due volte','Perché i poveri non potevano votare','Perché il loro voto valeva doppio per legge'],'Conta le centurie.','I ricchi erano pochi ma inquadrati in 98 centurie su 193: da soli facevano la maggioranza.'],
+['R','Quale assemblea era riservata solo ai plebei?','I concilia plebis',['I comizi centuriati','I comizi tributi','Il Senato'],'In latino: «adunanze della plebe».','I concilia plebis eleggevano i tribuni e votavano i plebiscita.'],
+['R','In che anno avvenne la secessione della plebe sull’Aventino?','494 a.C.',['509 a.C.','451 a.C.','367 a.C.'],'Quindici anni dopo la nascita della repubblica.','Nel 494 a.C. la plebe abbandonò la città e si accampò sull’Aventino.'],
+['R','Perché la secessione era un’arma così forte?','Senza i plebei non si poteva formare l’esercito',['Perché i plebei avevano molte armi','Perché i plebei controllavano il Senato','Perché i plebei erano tutti ricchi'],'Pensa alla leva militare.','Senza il contributo dei plebei era impossibile reclutare l’esercito, proprio mentre Roma combatteva su più fronti.'],
+['R','Che cosa ottennero i plebei con la secessione?','L’istituzione del tribunato della plebe',['Il diritto di sposare i patrizi','L’accesso al consolato','Le leggi scritte'],'All’inizio erano due.','I plebei ottennero i tribuni della plebe, con diritto di veto e persona sacra e inviolabile.'],
+['R','Chi convinse i plebei a tornare in città, secondo la tradizione?','Menenio Agrippa',['Furio Camillo','Spurio Cassio','Gaio Canuleio'],'Raccontò un apologo sul corpo umano.','Il senatore Menenio Agrippa paragonò lo Stato a un corpo: membra e stomaco devono collaborare.'],
+['R','Nell’apologo di Menenio Agrippa, che cosa rappresenta lo stomaco?','Il Senato',['Il popolo','Il re','L’esercito'],'Le membra sono il popolo.','Le membra sono il popolo, lo stomaco il Senato: con la discordia lo Stato muore, con la concordia resta in salute.'],
+['R','Perché le leggi delle XII Tavole (451 a.C.) furono così importanti?','Furono le prime leggi scritte',['Diedero il consolato ai plebei','Abolirono la schiavitù per debiti','Fondarono la repubblica'],'Prima il diritto era tramandato oralmente.','Fino ad allora il diritto era orale e custodito dai pontefici patrizi: scriverlo voleva dire renderlo uguale per tutti.'],
+['R','Chi scrisse le leggi delle XII Tavole?','Una commissione di dieci uomini, i decemviri',['I due consoli','Il re Tarquinio','I tribuni della plebe'],'«Decem» vuol dire dieci.','I decemviri le incisero su dodici lastre di bronzo, esposte nel Foro.'],
+['R','Che cosa stabilì la lex Canuleia (445 a.C.)?','Abolì il divieto di matrimonio tra patrizi e plebei',['Diede ai plebei il consolato','Abolì la schiavitù per debiti','Diede valore di legge ai plebisciti'],'Riguarda le famiglie.','Voluta dal tribuno Gaio Canuleio, permise i matrimoni misti.'],
+['R','Che cosa stabilirono le leggi Licinie-Sestie (367 a.C.)?','L’accesso dei plebei al consolato',['Le prime leggi scritte','I matrimoni misti','L’accesso al pontificato'],'La carica più importante della repubblica.','Aprirono ai plebei il consolato e quindi il Senato; c’erano anche una riforma agraria (massimo 500 iugeri) e aiuti ai debitori.'],
+['R','Che cosa abolì la lex Petelia del 326 a.C.?','La schiavitù per debiti',['Il divieto di matrimonio','La dittatura','Il Senato'],'Da allora il creditore poteva prendere solo i beni.','Da quel momento in garanzia valevano solo i beni materiali del debitore, non la sua persona.'],
+['R','Che cosa stabilì la lex Hortensia del 287 a.C.?','I plebisciti valevano come legge per tutto il popolo',['I plebei potevano diventare pontefici','Nasceva il tribunato della plebe','Era vietato il matrimonio misto'],'Riguarda le decisioni dei concilia plebis.','Con la lex Hortensia le proposte dei tribuni approvate dalla plebe diventarono legge per tutti.'],
+['R','Al termine dello scontro tra patrizi e plebei, chi guida Roma?','Un’oligarchia patrizio-plebea basata sulla ricchezza',['Solo i patrizi, come prima','Solo i plebei','Un nuovo re'],'Non conta più la nascita, conta…','All’aristocrazia del sangue si sostituisce un’oligarchia basata sulla ricchezza.'],
+
+['I','In quale battaglia Roma vinse la Lega latina nel 496 a.C.?','Lago Regillo',['Allia','Sentino','Canne'],'Un lago.','Al lago Regillo i Romani prevalsero; nel 493 seguì il trattato Cassiano.'],
+['I','Che cosa stabiliva il trattato Cassiano (493 a.C.)?','Un’alleanza militare tra Roma e la Lega latina',['La pace con Cartagine','La fine della monarchia','La conquista di Veio'],'Porta il nome del console Spurio Cassio.','Il foedus Cassianum creò una federazione latino-romana.'],
+['I','Perché la guerra contro Equi e Volsci era difficile?','Erano seminomadi e non offrivano bersagli fissi',['Avevano gli elefanti','Avevano una grande flotta','Erano alleati di Cartagine'],'Pensa alle città da conquistare.','Popoli seminomadi, senza città da assediare: difficili da colpire.'],
+['I','Perché Roma entrò in conflitto con la città etrusca di Veio?','Per il controllo del commercio del sale',['Per il controllo del grano siciliano','Perché Veio aveva rapito Lucrezia','Per le miniere d’argento'],'Una risorsa preziosissima per conservare il cibo.','Veio, a soli 17 km, voleva togliere a Roma il commercio del sale.'],
+['I','Chi conquistò Veio nel 396 a.C.?','Il console Furio Camillo',['Pirro','Manio Curio Dentato','Scipione'],'Un nome legato anche al sacco gallico.','Con Furio Camillo Roma prese Veio e raddoppiò i suoi domini.'],
+['I','Che cosa accadde nel 390 a.C.?','I Galli sconfissero i Romani all’Allia e saccheggiarono Roma',['Annibale passò le Alpi','Roma distrusse Cartagine','Nacque la repubblica'],'I Romani chiamavano «Galli» i Celti.','Dopo la battaglia dell’Allia i Galli Sènoni incendiarono Roma e se ne andarono solo dopo un riscatto in oro.'],
+['I','Come finì la Guerra latina (340-338 a.C.)?','Roma sciolse la Lega latina e fece trattati con le singole città',['La Lega latina conquistò Roma','Roma e i Latini si fusero in un solo popolo','I Galli vinsero tutti'],'«Divide et impera».','Roma impose trattati bilaterali: alcune città ebbero la piena cittadinanza, altre dovettero dare tributi e soldati.'],
+['I','Chi erano i Sanniti?','Un popolo di pastori delle montagne del Sannio, organizzato in federazione',['Una colonia greca della Puglia','Un popolo celtico della pianura Padana','Mercenari campani di Messina'],'Molise e Irpinia.','Non avevano uno Stato unitario: le loro tribù erano unite in una federazione.'],
+['I','Che cosa accadde alle Forche Caudine nel 321 a.C.?','I Romani, accerchiati, si arresero e passarono disarmati sotto un giogo',['I Romani sconfissero Pirro','I Sanniti chiesero la pace','I Galli incendiarono Roma'],'Una bruciante umiliazione.','Accerchiati nella gola di Caudio, i Romani passarono sotto il giogo di lance; poi rifiutarono la pace.'],
+['I','In quale battaglia del 295 a.C. Roma batté Sanniti, Galli, Etruschi e Umbri?','Sentino',['Boviano','Eraclea','Zama'],'Nelle odierne Marche.','Sentino fu la vittoria decisiva della Terza guerra sannitica.'],
+['I','Come iniziò la guerra contro Taranto?','Roma mandò navi nel golfo violando un trattato e Taranto ne affondò alcune (282 a.C.)',['Taranto attaccò Roma via terra','Pirro sbarcò a Ostia','I Galli si allearono con Taranto'],'C’era un trattato del 303 a.C. sul golfo.','Nel 282 a.C., dopo le provocazioni romane, Taranto affondò alcune navi romane.'],
+['I','Chi era Pirro?','Il re dell’Epiro, chiamato in aiuto da Taranto',['Il re di Macedonia alleato di Annibale','Un generale cartaginese','Il tiranno di Siracusa'],'Voleva imitare Alessandro Magno.','Pirro, re dell’Epiro, voleva un regno greco sulle due sponde dell’Adriatico.'],
+['I','Che cosa significa «vittoria di Pirro»?','Un successo pagato a un prezzo troppo alto',['Una vittoria facile e veloce','Una vittoria ottenuta con l’inganno','Una sconfitta onorevole'],'Pirro vinse, ma perse moltissimi uomini.','A Eraclea (280) e Ascoli Satriano (279) Pirro vinse con gravissime perdite.'],
+['I','Quali armi diedero a Pirro le prime vittorie?','La falange macedone e gli elefanti',['I corvi e le quinqueremi','La legione manipolare','Le macchine di Archimede'],'Animali che i Romani non avevano mai visto.','Falange macedone ed elefanti, sconosciuti ai Romani.'],
+['I','Dove fu sconfitto definitivamente Pirro nel 275 a.C.?','A Maleventum, poi ribattezzata Beneventum',['A Eraclea','A Taranto','In Sicilia'],'Il nome della città cambiò «in meglio».','Dopo la vittoria i Romani cambiarono Maleventum in Beneventum.'],
+['I','Chi erano i socii?','Alleati legati a Roma da un trattato: davano truppe ma restavano autonomi',['Cittadini romani con pieni diritti','Coloni mandati da Roma','Schiavi di guerra'],'In latino socius = compagno.','I socii dovevano fornire truppe in guerra, ma mantenevano l’autonomia negli affari interni.'],
+['I','Che cosa dava la «cittadinanza senza diritti politici»?','Solo i diritti civili, come commerciare e sposarsi con Romani',['Il diritto di votare nei comizi','L’esenzione dai tributi','Il diritto di diventare console'],'Mancava il voto.','Nei municipi con questa cittadinanza si potevano commerciare e sposare Romani, ma non votare.'],
+['I','A che cosa servivano le colonie?','Ad alleggerire Roma, premiare i soldati e sorvegliare i territori',['A raccogliere le tasse dei Galli','A ospitare i senatori in pensione','A costruire le navi da guerra'],'Erano anche «avamposti di guardia».','Ai poveri e agli ex soldati si davano terre; le colonie sorvegliavano le zone più turbolente.'],
+['I','Da circa quanti soldati era formato un manipolo?','120',['12','1.000','6.000'],'Più di cento.','Il manipolo era un’unità agile di circa 120 soldati.'],
+['I','In che ordine erano disposte le file della legione manipolare?','Velites, hastati, principes, triarii',['Triarii, principes, hastati, velites','Hastati, velites, triarii, principes','Principes, triarii, velites, hastati'],'Prima le armi leggere, in fondo i più esperti.','Velites con giavellotti, poi i giovani hastati, poi principes e triarii, i più esperti.'],
+['I','Com’era l’esercito della Roma repubblicana?','Di leva, non permanente, senza mercenari',['Formato solo da mercenari','Permanente e di professionisti','Formato solo da patrizi'],'Servizio dai 17 ai 46 anni.','I cittadini erano obbligati a servire; dal IV secolo ricevettero una paga. Niente mercenari.'],
+
+['C','Quando e da chi fu fondata Cartagine?','Nell’814 a.C. da coloni di Tiro',['Nel 753 a.C. da coloni greci','Nel 509 a.C. da coloni etruschi','Nel 264 a.C. da coloni romani'],'Coloni fenici.','La fondarono coloni di Tiro nell’814 a.C.; la leggenda parla della regina Elissa, detta Didone.'],
+['C','Chi erano i sufeti?','Due magistrati cartaginesi in carica un anno',['I senatori di Cartagine','I mercenari di Cartagine','I sacerdoti di Baal'],'Una specie di «consoli» punici.','Al vertice dello Stato cartaginese c’erano due sufeti con funzioni esecutive.'],
+['C','A chi spettava il potere decisionale supremo a Cartagine?','Al Consiglio degli anziani (300 membri)',['All’assemblea popolare','Al re','Ai sufeti'],'Lo stesso numero dei senatori romani.','Il Consiglio degli anziani decideva; l’assemblea popolare aveva solo una certa influenza.'],
+['C','Qual è una differenza fondamentale tra Cartagine e Roma?','Cartagine opprimeva i popoli dominati e usava mercenari',['Cartagine era una monarchia assoluta','Cartagine non aveva una flotta','Roma usava soprattutto mercenari'],'Due motivi, uno riguarda l’esercito.','Cartagine reprimeva i sottomessi (poco fedeli) e pagava soldati stranieri, che potevano rifiutarsi di combattere.'],
+['C','Che cosa pensano oggi gli studiosi del tophet di Cartagine?','Era probabilmente una necropoli dei bambini, non un luogo di sacrifici',['Era il porto militare','Era il tempio di Saturno','Era il palazzo dei sufeti'],'Le ossa non mostrano segni di morte violenta.','La propaganda romana parlava di sacrifici di bambini, ma oggi la cosa è messa in dubbio.'],
+['C','Prima delle guerre puniche, i rapporti tra Roma e Cartagine erano…','amichevoli: trattati commerciali e alleanza contro Pirro',['sempre ostili','inesistenti','di dipendenza di Roma da Cartagine'],'Avevano un nemico comune.','Tra VI e III secolo a.C. le due città firmarono trattati commerciali e un’alleanza contro Pirro.'],
+['C','Chi erano i Mamertini?','Mercenari campani che occuparono Messina',['Pirati illirici','Soldati di Annibale','Sacerdoti di Marte a Roma'],'«Figli di Mamers», cioè Marte.','Cacciati da Gerone II di Siracusa, occuparono Zancle (Messina) nel 289 a.C.'],
+['C','Quale fu la scintilla della Prima guerra punica?','La contesa per Messina e lo Stretto',['La distruzione di Sagunto','L’attacco a Massinissa','Il sacco di Roma'],'Il canale tra Sicilia e penisola.','I Messinesi, contrari al controllo cartaginese, chiesero aiuto a Roma, che intervenne nel 264 a.C.'],
+['C','Che cos’erano i «corvi»?','Ponti di legno con arpioni per l’arrembaggio',['Navi a cinque file di rematori','Spie cartaginesi','Catapulte di Archimede'],'Trasformavano la battaglia navale in terrestre.','Agganciavano le navi nemiche e permettevano ai legionari di combattere corpo a corpo.'],
+['C','Dove ottenne Roma la prima grande vittoria navale, nel 260 a.C.?','Milazzo',['Egadi','Zama','Canne'],'In Sicilia, vicino a Messina.','Grazie ai corvi, nel 260 a.C. Roma vinse nelle acque di Milazzo.'],
+['C','Che cos’era una quinquereme?','Una nave con cinque file di rematori',['Un’unità di cinque legioni','Una tassa di un quinto','Una catapulta a cinque bracci'],'«Quinque» = cinque.','Roma varò 100 quinqueremi e 20 triremi.'],
+['C','Quale battaglia chiuse la Prima guerra punica nel 241 a.C.?','Isole Egadi',['Milazzo','Panormo','Zama'],'Isole vicino a Trapani.','Alle Egadi Roma sconfisse la flotta cartaginese; Cartagine lasciò la Sicilia.'],
+['C','Quale fu la prima provincia romana?','La Sicilia',['La Sardegna e la Corsica','La Gallia Cisalpina','La Spagna'],'L’isola contesa nella Prima guerra punica.','La Sicilia, governata da un magistrato; gli abitanti, senza cittadinanza, pagavano un contributo annuo.'],
+['C','Quale fu la seconda provincia romana (235 a.C., secondo il libro)?','Sardegna e Corsica',['Sicilia','Macedonia','Acaia'],'Due isole insieme.','Cartagine, senza soldi né flotta, dovette rinunciarvi.'],
+['C','Di che cosa fu accusato Verre, governatore della Sicilia, nel processo di Cicerone?','Di concussione',['Di tradimento','Di omicidio','Di furto di elefanti'],'Il reato del pubblico ufficiale che si fa dare denaro.','Verre (73-71 a.C.) fu accusato dai Siciliani di concussione.'],
+['C','Come definì Polibio la Prima guerra punica?','«La più lunga, ininterrotta e tremenda»',['«La più breve e facile»','«Una vittoria di Pirro»','«La guerra del sale»'],'Durò più di vent’anni.','Per Polibio fu la più lunga, ininterrotta e tremenda guerra conosciuta.'],
+['C','Quale terza provincia nacque dopo le vittorie sui Galli del 225 e 222 a.C.?','La Gallia Cisalpina',['La Provenza','La Macedonia','L’Illiria'],'Corrisponde alla pianura Padana.','Roma occupò Milano, fondò Cremona e Piacenza e fece della Gallia Cisalpina la terza provincia.'],
+
+['A','Perché Amilcare Barca portò i Cartaginesi in Spagna?','Per le ricche miniere d’oro e d’argento',['Per vendicarsi dei Galli','Per fondare una nuova capitale','Per allearsi con Pirro'],'Cartagine doveva pagare i debiti di guerra.','L’oro e l’argento spagnoli servivano a risollevare le finanze e a pagare Roma.'],
+['A','Quale fiume segnava il confine tra le zone romana e cartaginese in Spagna?','L’Ebro',['Il Rodano','Il Ticino','Il Tago'],'Lo stesso dell’omonimo delta spagnolo.','Dal 226 a.C. l’Ebro divideva le due aree d’influenza.'],
+['A','Qual era il legame tra Amilcare, Annibale e Asdrubale?','Amilcare era il padre; Annibale e Asdrubale fratelli',['Annibale era il padre di Amilcare','Asdrubale era il padre di Annibale','Erano tre generali senza parentela'],'Sono tutti della famiglia Barca.','Annibale successe al padre Amilcare e lasciò il fratello Asdrubale al comando in Spagna.'],
+['A','Quale città distrusse Annibale nel 219 a.C., dando il pretesto alla guerra?','Sagunto',['Cartagena','Capua','Siracusa'],'Alleata di Roma in Spagna.','Sagunto era fedele alleata di Roma: nel 218 Roma dichiarò guerra.'],
+['A','Quale catena montuosa attraversò Annibale per arrivare in Italia?','Le Alpi (dopo i Pirenei)',['Gli Appennini','Il Caucaso','I Balcani'],'A fine settembre, con il freddo.','Superati i Pirenei, varcò le Alpi con circa 50.000 uomini e 37 elefanti.'],
+['A','Con quanti elefanti, secondo il libro, iniziò la traversata delle Alpi?','37',['3','137','370'],'Più di trenta.','Annibale partì con quasi 50.000 soldati e 37 elefanti; arrivarono circa 30.000 uomini.'],
+['A','Quali furono le prime vittorie di Annibale in Italia?','Ticino e Trebbia (218), Trasimeno (217)',['Canne e Zama','Milazzo ed Egadi','Eraclea e Ascoli Satriano'],'Due fiumi e un lago.','Prima i fiumi Ticino e Trebbia, poi il lago Trasimeno.'],
+['A','Perché Quinto Fabio Massimo fu detto «il Temporeggiatore»?','Evitava lo scontro diretto e bloccava i rifornimenti',['Arrivava sempre in ritardo','Fece una tregua lunghissima','Costruì un grande orologio'],'Prendere tempo…','La sua tattica attendista logorava Annibale senza rischiare battaglie.'],
+['A','Che cosa accadde a Canne nel 216 a.C.?','Annibale vinse con un doppio accerchiamento',['Roma vinse la guerra','Annibale fu catturato','Scipione conquistò Cartagena'],'Vicino a Barletta.','Circa 50.000 caduti romani e 20.000 prigionieri; molte città del Sud passarono con Cartagine.'],
+['A','Quale re si alleò con Annibale dopo Canne?','Filippo V di Macedonia',['Antioco III di Siria','Pirro','Massinissa'],'Voleva l’Illiria.','Filippo V offrì il suo aiuto in cambio di campo libero in Illiria: iniziarono le guerre macedoniche.'],
+['A','Qual fu il «grave errore» di Annibale?','Invece di puntare su Roma, attaccò la Campania e restò bloccato a Capua',['Tornò subito in Africa','Lasciò gli elefanti in Spagna','Si alleò con i Galli'],'Diede tempo ai Romani.','Bloccato a Capua e senza aiuti, permise a Roma di riorganizzarsi.'],
+['A','Quale città cadde nel 212 a.C. nonostante le macchine di Archimede?','Siracusa',['Capua','Taranto','Cartagena'],'La città di Archimede.','Siracusa cadde nel 212 a.C.; Capua fu ripresa l’anno dopo.'],
+['A','Che cosa conquistò Scipione in Spagna, a soli 24 anni?','Cartagena (Carthago Nova)',['Sagunto','Numanzia','Cadice'],'La «nuova Cartagine».','Conquistò la capitale della Spagna cartaginese; la sua clemenza gli portò l’appoggio delle tribù.'],
+['A','Dove e quando Scipione sconfisse Annibale?','A Zama, nel 202 a.C.',['A Canne, nel 216 a.C.','Alle Egadi, nel 241 a.C.','A Pidna, nel 168 a.C.'],'In Africa, nell’attuale Tunisia.','Dopo Zama Scipione fu detto «l’Africano».'],
+['A','Come neutralizzò Scipione gli elefanti a Zama?','Li spaventò con frecce, trombe e grida',['Li catturò con le reti','Li avvelenò','Usò i corvi'],'Fece molto rumore.','Gli elefanti impazziti fecero più danni ai Cartaginesi che ai Romani.'],
+['A','Quale fu una condizione della pace dopo Zama?','Pagare 10.000 talenti d’argento e consegnare la flotta (tranne 10 navi)',['Cedere la Sicilia a Roma','Distruggere Cartagine','Consegnare Annibale vivo'],'Un risarcimento enorme e quasi niente navi.','Cartagine perse anche i territori fuori dall’Africa e non poteva fare guerre senza il permesso di Roma.'],
+['A','Perché Roma vinse la Seconda guerra punica?','Riserva inesauribile di uomini e consenso degli alleati',['Aveva gli elefanti','Aveva mercenari migliori','Annibale si arrese subito'],'Il «sentire insieme».','Da 4 legioni a 24 nel 211, circa 200.000 uomini; e gli alleati, quasi tutti, restarono fedeli.'],
+['A','Da dove deriva la parola «consenso»?','Dal latino cum-sentire, «sentire insieme»',['Dal greco thymos, «ira»','Dal latino consulere, «deliberare»','Dal latino censere, «contare»'],'Cum = con.','Il «sentire comune» creato da Roma con gli alleati fu decisivo.'],
+
+['O','Perché dopo Zama Roma si volse verso Siria e Macedonia?','Erano regni ricchi e potevano allearsi con Cartagine',['Per vendicare Pirro','Per trovare nuovi mercenari','Perché avevano attaccato Roma'],'Due motivi: ricchezza e pericolo.','Le mire espansionistiche erano spinte da tutti: aristocrazia, mercanti e popolo.'],
+['O','Quando si combatté la Prima guerra macedonica?','215-205 a.C.',['200-197 a.C.','171-168 a.C.','149-146 a.C.'],'Durante la Seconda guerra punica.','Filippo V si era alleato con Annibale; senza il suo aiuto fu sconfitto.'],
+['O','Chi chiese aiuto a Roma all’inizio della Seconda guerra macedonica (200 a.C.)?','Il Regno di Pergamo e Rodi',['Atene e Sparta','Cartagine','I Galli'],'Un regno e un’isola.','Erano stanchi degli assedi di Filippo V e di Antioco III.'],
+['O','Che cosa annunciò Flaminio ai giochi istmici di Corinto?','Che le poleis greche erano libere',['Che la Grecia diventava provincia','Che Cartagine doveva essere distrutta','Che Annibale era morto'],'Fu un’illusione.','In realtà i Greci avevano solo cambiato padrone.'],
+['O','Chi era Antioco III?','Il re di Siria, sconfitto alle Termopili e a Magnesia',['Il re di Macedonia sconfitto a Pidna','Il re di Numidia','Un console romano'],'Annibale si rifugiò da lui.','Sconfitto alle Termopili (191) e a Magnesia (190); pace del 188 a.C.'],
+['O','Come morì Annibale (183 a.C.)?','Bevve il veleno per non cadere nelle mani dei Romani',['Cadde a Zama','Fu giustiziato a Roma','Morì di vecchiaia a Cartagine'],'Lo racconta Cornelio Nepote.','Non volendo morire per mano di nessuno, bevve il veleno che portava sempre con sé.'],
+['O','Dove fu sconfitto Perseo nel 168 a.C.?','A Pidna',['A Magnesia','Alle Termopili','A Corinto'],'Nella Macedonia meridionale.','Con Pidna finì la Terza guerra macedonica; nel 146 la Macedonia divenne provincia.'],
+['O','Che cosa accadde in Grecia nel 146 a.C.?','Corinto fu rasa al suolo e la Grecia divenne la provincia di Acaia',['Atene fu distrutta','Sparta conquistò Roma','Nacque la Lega latina'],'Solo Atene restò libera.','Atene, sempre fedele, fu ricompensata con la libertà.'],
+['O','Chi diceva in Senato «Carthago delenda est»?','Marco Porcio Catone',['Scipione l’Africano','Fabio Massimo','Cicerone'],'Un celebre oratore.','«Cartagine dev’essere distrutta»: Catone temeva la ripresa economica di Cartagine.'],
+['O','Quale fu il pretesto della Terza guerra punica?','Cartagine attaccò Massinissa, re di Numidia alleato di Roma',['Cartagine distrusse Sagunto','Cartagine ospitò Annibale','Cartagine occupò Messina'],'Un re africano.','Nel 151 a.C. Cartagine attaccò senza il consenso di Roma, violando il trattato.'],
+['O','Chi rase al suolo Cartagine nel 146 a.C.?','Publio Cornelio Scipione Emiliano',['Scipione l’Africano','Marco Porcio Catone','Tito Quinzio Flaminio'],'Il figlio adottivo dell’Africano.','Scipione Emiliano, detto «Secondo Africano»; i superstiti furono venduti come schiavi.'],
+['O','Quale città dei Celtiberi fu distrutta nel 133 a.C.?','Numanzia',['Sagunto','Cartagena','Corinto'],'In Spagna.','Scipione Emiliano distrusse Numanzia; il Mediterraneo era ormai mare nostrum.'],
+['O','Come chiamavano i Romani il Mediterraneo dopo il 133 a.C.?','Mare nostrum',['Mare internum Punicum','Oceanus','Mare Graecum'],'«Il nostro mare».','Roma era la più grande potenza del Mediterraneo.'],
+['O','Quale regno Roma ereditò perché il sovrano morì senza eredi?','Il Regno di Pergamo',['Il Regno di Macedonia','La Numidia','La Siria'],'In Asia Minore.','Roma divenne erede del Regno di Pergamo e di buona parte dell’Asia Minore.'],
+
+['X','Che cosa gridò, secondo Livio, il gallo Brenno gettando la spada sulla bilancia?','«Vae victis!» (Guai ai vinti!)',['«Veni, vidi, vici»','«Carthago delenda est»','«Alea iacta est»'],'Riguarda i vinti.','Mentre si pesava l’oro del riscatto (390 a.C.).'],
+['X','Che cosa disse Maarbale ad Annibale dopo Canne?','«Sai vincere, ma non sai sfruttare la vittoria»',['«Hai vinto, ora torna a casa»','«La fortuna aiuta gli audaci»','«Il dado è tratto»'],'Annibale non marciò su Roma.','In latino: «Vincere scis, Hannibal, victoria uti nescis».'],
+['X','Dove morì Asdrubale, il fratello di Annibale, nel 207 a.C.?','Al fiume Metauro',['A Zama','A Canne','Al lago Trasimeno'],'Nelle Marche.','Portava rinforzi ad Annibale: la sua sconfitta lo lasciò senza aiuti.'],
+['X','Quale strada fece costruire Appio Claudio Cieco?','La via Appia',['La via Flaminia','La via Emilia','La via Aurelia'],'Porta il suo nome.','La «regina delle strade», da Roma a Capua e poi fino a Brindisi.'],
+['X','Chi vinse a Milazzo nel 260 a.C.?','Il console Gaio Duilio',['Scipione l’Africano','Attilio Regolo','Furio Camillo'],'Fu celebrato con una colonna con i rostri.','La colonna rostrata era ornata con gli speroni delle navi nemiche.']
+];
+
+/* ---------- Stato ---------- */
+const LS='quiz_storia_nora_v1';
+let scelta={arg:'tutti', num:15};
+let giro=[], i=0, aiutoUsato=false, esiti=[], ultimiErrori=[];
+
+function mescola(a){ a=a.slice(); for(let k=a.length-1;k>0;k--){const j=Math.floor(Math.random()*(k+1)); [a[k],a[j]]=[a[j],a[k]];} return a; }
+function $(id){return document.getElementById(id);}
+function vai(s){ document.querySelectorAll('.screen').forEach(x=>x.classList.remove('on')); $(s).classList.add('on'); window.scrollTo(0,0); }
+function leggi(){ try{ return JSON.parse(localStorage.getItem(LS)||'[]'); }catch(e){ return []; } }
+function scrivi(v){ try{ localStorage.setItem(LS, JSON.stringify(v.slice(-30))); }catch(e){} }
+
+const FRASI={
+  bene:['Bravissima!','Esatto, ululato di gioia!','Perfetto!','Ottimo, Nora!','Giusto! Il lupetto approva.'],
+  cosi:['Giusto… ma con l’aiutino!','Ci sei, con una spintarella.','Quasi da sola: bene così così!'],
+  male:['Ahi, non era questa.','Uffa! Riproviamo dopo.','Niente paura: si ripassa.','Sbagliato… il lupetto è triste.']
+};
+function frase(t){ const a=FRASI[t]; return a[Math.floor(Math.random()*a.length)]; }
+
+/* ---------- Schermata iniziale ---------- */
+function chips(){
+  const ca=$('c-arg'); ca.innerHTML='';
+  const voci=[['tutti','Tutto']].concat(Object.keys(ARG).map(k=>[k,ARG[k]]));
+  voci.forEach(([k,t])=>{
+    const n = k==='tutti'?D.length:D.filter(d=>d[0]===k).length;
+    const b=document.createElement('button'); b.className='chip'+(scelta.arg===k?' on':''); b.textContent=t+' ('+n+')';
+    b.onclick=()=>{scelta.arg=k; chips();}; ca.appendChild(b);
+  });
+  const cn=$('c-num'); cn.innerHTML='';
+  [[10,'10'],[15,'15'],[25,'25'],[0,'Tutte']].forEach(([n,t])=>{
+    const b=document.createElement('button'); b.className='chip'+(scelta.num===n?' on':''); b.textContent=t;
+    b.onclick=()=>{scelta.num=n; chips();}; cn.appendChild(b);
+  });
+  const st=leggi();
+  if(st.length){
+    const ult=st.slice(-5).reverse().map(r=>`${r.data} · ${r.arg}: <b>${r.punti}/${r.tot}</b>`).join('<br>');
+    $('storico').innerHTML='<b>Ultimi quiz</b><br>'+ult;
+  } else $('storico').textContent='';
+}
+function inizia(lista){
+  giro=lista; i=0; esiti=[];
+  vai('s-domanda'); domanda();
+}
+$('b-via').onclick=()=>{
+  let pool = scelta.arg==='tutti'? D : D.filter(d=>d[0]===scelta.arg);
+  pool=mescola(pool);
+  if(scelta.num) pool=pool.slice(0,scelta.num);
+  inizia(pool);
+};
+$('b-esci').onclick=()=>{ vai('s-inizio'); metti('lupo-inizio','ciao','ciao'); chips(); };
+
+/* ---------- Domanda ---------- */
+function domanda(){
+  const d=giro[i]; aiutoUsato=false;
+  $('bar').style.width=(i/giro.length*100)+'%';
+  $('count').textContent=(i+1)+' / '+giro.length;
+  $('topic').textContent=ARG[d[0]];
+  $('q').textContent=d[1];
+  $('hint').style.display='none'; $('hint').textContent='💡 '+d[4];
+  $('r-hint').style.display='flex'; $('b-hint').disabled=false;
+  $('fb').className='feedback'; $('b-avanti').style.display='none';
+  const opts=mescola([d[2]].concat(d[3]));
+  const box=$('opts'); box.innerHTML='';
+  opts.forEach((t,n)=>{
+    const b=document.createElement('button'); b.className='opt';
+    b.innerHTML=`<span class="k">${'ABCD'[n]}</span><span></span>`; b.lastChild.textContent=t;
+    b.onclick=()=>rispondi(b,t); box.appendChild(b);
+  });
+}
+$('b-hint').onclick=()=>{ aiutoUsato=true; $('hint').style.display='block'; $('b-hint').disabled=true; };
+
+function rispondi(btn,t){
+  const d=giro[i]; const giusto = t===d[2];
+  document.querySelectorAll('.opt').forEach(b=>{
+    b.disabled=true;
+    const testo=b.lastChild.textContent;
+    if(testo===d[2]) b.classList.add('ok'); else if(b===btn) b.classList.add('ko'); else b.classList.add('dim');
+  });
+  const esito = giusto ? (aiutoUsato?'cosi':'bene') : 'male';
+  esiti.push({d, esito, data:t});
+  $('r-hint').style.display='none';
+  const fb=$('fb'); fb.className='feedback on '+esito;
+  metti('lupo-fb', esito, esito);
+  $('fb-msg').textContent=frase(esito);
+  $('fb-exp').textContent=(giusto?'':'Risposta giusta: '+d[2]+'. ')+d[5];
+  const av=$('b-avanti'); av.style.display='block'; av.textContent = (i===giro.length-1)?'Vedi il risultato →':'Avanti →';
+  setTimeout(()=>fb.scrollIntoView({behavior:'smooth', block:'nearest'}),80);
+}
+$('b-avanti').onclick=()=>{ i++; if(i<giro.length) domanda(); else fine(); };
+
+/* ---------- Risultati ---------- */
+function fine(){
+  $('bar').style.width='100%';
+  const b=esiti.filter(e=>e.esito==='bene').length, c=esiti.filter(e=>e.esito==='cosi').length, m=esiti.filter(e=>e.esito==='male').length;
+  const tot=esiti.length; const punti=b + c*0.5; const perc=punti/tot;
+  const umore = perc>=0.8?'bene' : perc>=0.55?'cosi':'male';
+  vai('s-fine'); metti('lupo-fine', umore, umore);
+  $('score').innerHTML=`${(Math.round(punti*10)/10).toString().replace('.',',')}<small> / ${tot}</small>`;
+  $('giudizio').textContent = umore==='bene' ? 'Preparatissima! Il lupetto ulula di gioia.' : umore==='cosi' ? 'Così così: ci sei quasi, ripassa gli errori.' : 'Male stavolta: rileggi gli appunti e riprova!';
+  $('giudizio').style.color = umore==='bene'?'var(--ok)':umore==='cosi'?'#a2740f':'var(--ko)';
+  $('tally').innerHTML=`<span class="t-b">😊 ${b} bene</span><span class="t-c">😐 ${c} con aiutino</span><span class="t-m">😢 ${m} sbagliate</span>`;
+  ultimiErrori=esiti.filter(e=>e.esito!=='bene').map(e=>e.d);
+  const el=$('errori'); el.innerHTML='';
+  esiti.filter(e=>e.esito!=='bene').forEach(e=>{
+    const r=document.createElement('div'); r.className='err';
+    r.innerHTML=`<div></div><div>✔ <b></b></div>${e.esito==='male'?'<div class="tu">✘ </div>':''}`;
+    r.children[0].textContent=e.d[1]; r.children[1].lastChild.textContent=e.d[2];
+    if(e.esito==='male') r.children[2].append(e.data);
+    el.appendChild(r);
+  });
+  $('l-err').style.display = ultimiErrori.length?'block':'none';
+  $('b-errori').style.display = ultimiErrori.length?'inline-block':'none';
+  const st=leggi(); const oggi=new Date();
+  st.push({data:oggi.toLocaleDateString('it-IT'), arg: scelta.arg==='tutti'?'Tutto':ARG[scelta.arg], punti:(Math.round(punti*10)/10).toString().replace('.',','), tot});
+  scrivi(st);
+}
+$('b-errori').onclick=()=>inizia(mescola(ultimiErrori));
+$('b-nuovo').onclick=()=>{ vai('s-inizio'); metti('lupo-inizio','ciao','ciao'); chips(); };
+
+/* ---------- Avvio ---------- */
+metti('lupo-inizio','ciao','ciao'); chips();
+</script>
+</body>
+</html>
