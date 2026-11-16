@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Guerre puniche">
+<meta name="theme-color" content="#f3ecdf">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<title>Guerre puniche: tre battaglie simulate</title>
+<style>
+/* VOICE: plastico didattico, chiaro e calmo
+   IDEA: tre tavoli da gioco: il mare di Milazzo, la piana di Canne, il campo di Zama
+   PICTURE: il campo animato, grande, sotto le schede e le scelte
+   COLOUR and TYPE: terra e cuoio; rosso romano, blu cartaginese; serif per i testi
+   LAYOUT: schede in alto, scelte, campo, poi forze e cronaca */
+:root{color-scheme:light;--bg:#f3ecdf;--card:#fffdf8;--ink:#2a2622;--soft:#6f655a;--line:#e3d7c3;--roma:#b8432a;--cart:#2f5f86}
+*{box-sizing:border-box;min-width:0;-webkit-tap-highlight-color:transparent}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 "Iowan Old Style","Palatino",Georgia,serif;
+ padding:max(14px,env(safe-area-inset-top)) max(14px,env(safe-area-inset-right)) max(18px,env(safe-area-inset-bottom)) max(14px,env(safe-area-inset-left))}
+.wrap{max-width:1060px;margin:0 auto}
+.menu{display:inline-flex;align-items:center;min-height:44px;padding:8px 14px;border-radius:999px;border:2px solid var(--line);background:#fff;color:var(--ink);font:600 15px -apple-system,"Helvetica Neue",sans-serif;text-decoration:none;margin-bottom:6px}
+h1{font-size:clamp(26px,4vw,38px);line-height:1.08;margin:4px 0 10px;color:#8f3d22;text-wrap:balance}
+.tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-bottom:10px}
+.tab{min-height:62px;border:2px solid var(--line);background:#fff;border-radius:14px;padding:8px 10px;text-align:left;cursor:pointer;font:inherit;color:var(--ink)}
+.tab b{display:block;font-size:18px;line-height:1.15}.tab span{display:block;font:13px -apple-system,"Helvetica Neue",sans-serif;color:var(--soft)}
+.tab.on{border-color:var(--roma);background:#f9e6dc}
+.intro{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin-bottom:10px}
+.intro p{margin:0 0 6px}.intro p:last-child{margin:0}
+.piu{font-size:14px;color:#4b6b3f}
+.ctrl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:10px}
+.grp{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px}
+.grp b{display:block;font:700 12px/1.2 -apple-system,"Helvetica Neue",sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--soft);margin-bottom:7px}
+.seg{display:flex;gap:6px;flex-wrap:wrap}
+.seg button{flex:1 1 auto;min-height:44px;font:600 15px -apple-system,"Helvetica Neue",sans-serif;border:2px solid var(--line);background:#fff;color:var(--ink);border-radius:11px;padding:8px 10px;cursor:pointer}
+.seg button.on{border-color:var(--roma);background:#f9e6dc;color:#8f3d22}
+.bar{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:10px}
+.btn{min-height:46px;font:700 17px -apple-system,"Helvetica Neue",sans-serif;border:none;border-radius:13px;padding:10px 20px;background:var(--roma);color:#fff;box-shadow:0 3px 0 #8f3d22;cursor:pointer}
+.btn:active{transform:translateY(2px);box-shadow:0 1px 0 #8f3d22}
+.btn.sec{background:#fff;color:var(--cart);border:2px solid var(--cart);box-shadow:0 3px 0 #c9d6e0}
+.vel{margin-left:auto;display:flex;gap:6px;align-items:center;font:600 14px -apple-system,"Helvetica Neue",sans-serif;color:var(--soft)}
+.vel button{min-width:46px;min-height:44px;border-radius:10px;border:2px solid var(--line);background:#fff;font:700 14px -apple-system,sans-serif;cursor:pointer}
+.vel button.on{border-color:var(--cart);color:var(--cart)}
+.campo{position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#e6dcc4}
+canvas{display:block;width:100%;height:auto}
+.ris{position:absolute;inset:auto 12px 12px 12px;background:rgba(255,253,248,.97);border-radius:14px;padding:14px 16px;border:2px solid var(--line);display:none;max-height:76%;overflow:auto;box-shadow:0 6px 24px rgba(0,0,0,.15)}
+.ris.on{display:block;animation:in .4s ease}
+@keyframes in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.ris h2{margin:0 0 6px;font-size:22px}.ris ul{margin:6px 0 0;padding-left:20px}.ris li{margin-bottom:4px}
+.leg{display:flex;flex-wrap:wrap;gap:6px 14px;font:13px -apple-system,"Helvetica Neue",sans-serif;color:var(--soft);margin-top:8px}
+.leg span{display:inline-flex;align-items:center;gap:5px}.sw{width:11px;height:11px;border-radius:3px;display:inline-block}
+.sotto{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:10px;margin-top:10px}
+.pan{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px}
+.pan h3{margin:0 0 8px;font:700 12px -apple-system,"Helvetica Neue",sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--soft)}
+.riga{display:grid;grid-template-columns:96px minmax(0,1fr) 46px;gap:8px;align-items:center;font:14px -apple-system,"Helvetica Neue",sans-serif;margin-bottom:6px}
+.tr{height:12px;background:#eee4d3;border-radius:99px;overflow:hidden}.tr i{display:block;height:100%;border-radius:99px;transition:width .3s}
+.num{text-align:right;font-variant-numeric:tabular-nums;font-weight:700}
+.log{font-size:15px;line-height:1.4;max-height:200px;overflow:auto}.log p{margin:0 0 6px}.log time{font:700 12px -apple-system,sans-serif;color:var(--soft);margin-right:6px}
+.note{font-size:13px;color:var(--soft);margin-top:10px}
+@media(max-width:760px){.tabs{grid-template-columns:minmax(0,1fr)}.ctrl{grid-template-columns:minmax(0,1fr)}.sotto{grid-template-columns:minmax(0,1fr)}.vel{margin-left:0}}
+@media(prefers-reduced-motion:reduce){.ris.on{animation:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="menu" href="../">☰ Menu</a>
+<h1>Le guerre puniche: tre battaglie</h1>
+<div class="tabs" id="tabs">
+ <button class="tab" data-b="milazzo"><b>Milazzo, 260 a.C.</b><span>Prima guerra punica · battaglia navale</span></button>
+ <button class="tab" data-b="canne"><b>Canne, 216 a.C.</b><span>Seconda guerra punica · la vittoria di Annibale</span></button>
+ <button class="tab" data-b="zama"><b>Zama, 202 a.C.</b><span>Seconda guerra punica · Scipione contro Annibale</span></button>
+</div>
+<div class="intro" id="intro"></div>
+<div class="ctrl" id="ctrl"></div>
+<div class="bar">
+ <button class="btn" id="b-via">▶ Via!</button>
+ <button class="btn sec" id="b-reset">↺ Rifai</button>
+ <div class="vel" id="vel">Velocità <button data-k="0">1×</button><button data-k="1">2×</button><button data-k="2">4×</button></div>
+</div>
+<div class="campo"><canvas id="cv" width="1000" height="700"></canvas><div class="ris" id="ris"></div></div>
+<div class="leg" id="leg"></div>
+<div class="sotto">
+ <div class="pan"><h3 id="h-forze">Forze in campo</h3><div id="forze"></div></div>
+ <div class="pan"><h3>Cronaca</h3><div class="log" id="log"></div></div>
+</div>
+<p class="note">Simulazioni semplificate, non ricostruzioni storiche: le regole riproducono ciò che dice il libro, e ogni partita è un po' diversa. I riquadri verdi «In più» indicano notizie che non sono nel libro.</p>
+</div>
+<script>
+/* Battaglie terrestri delle guerre puniche: Canne (216) e Zama (202) */
+const TW = 1000, TH = 700;
+const TP = { K: 0.0045 };
+function trng(seed){ let s = seed >>> 0; return () => { s = (s * 1664525 + 1013904223) >>> 0; return s / 4294967296; }; }
+
+class Terra {
+  constructor(cfg){
+    this.cfg = cfg; this.R = trng(cfg.seed || 1); this.units = []; this.t = 0; this.log = []; this.flags = {}; this.over = null;
+    this.stat = { fianchi: 0, spalle: 0, elefPanico: 0, elefCorridoio: 0, elefDanni: 0, calca: 0 };
+    if(cfg.battaglia === 'canne') this.canne(); else this.zama();
+    this.init = { R: this.forza('R'), N: this.forza('N') };
+  }
+  U(side, kind, x, y, o){
+    const base = {
+      fanteria:  { w: 40, d: 30, sp: 0.38, att: 1.0, defF: 1.0, defS: 0.55, max: 300 },
+      cav:       { w: 46, d: 20, sp: 1.25, att: 1.15, defF: 0.9, defS: 0.6, max: 120 },
+      elefanti:  { w: 20, d: 26, sp: 1.5, att: 3.0, defF: 2.5, defS: 2.0, max: 10 },
+      veliti:    { w: 30, d: 10, sp: 0.9, att: 0.3, defF: 0.5, defS: 0.4, max: 60 }
+    }[kind];
+    const dir = side === 'R' ? -1 : 1;
+    const u = Object.assign({ side, kind, dir, x, y, men: 0, coh: 1, fat: 0, state: 'fermo', fuga: false, via: false, contatto: false, id: this.units.length, x0: x, y0: y }, base, o || {});
+    u.men = u.max; u.att *= 0.94 + 0.12 * this.R(); this.units.push(u); return u;
+  }
+  evento(k, testo){ if(k && this.flags[k]) return; if(k) this.flags[k] = 1; this.log.push({ t: this.t, testo }); }
+  vivi(f){ return this.units.filter(u => !u.fuga && !u.via && (!f || f(u))); }
+  forza(side){ let m = 0; for(const u of this.units) if(u.side === side && !u.fuga && !u.via && u.kind === 'fanteria') m += u.men; return m; }
+  coesione(side){ let s = 0, n = 0; for(const u of this.units) if(u.side === side && !u.fuga && !u.via && u.kind === 'fanteria'){ s += u.coh * u.men; n += u.men; } return n ? s / n : 0; }
+  rect(u){ return [u.x - u.w / 2, u.y - u.d / 2, u.x + u.w / 2, u.y + u.d / 2]; }
+  sovrap(a, b, m = 0){ const A = this.rect(a), B = this.rect(b); return A[0] - m < B[2] && B[0] - m < A[2] && A[1] - m < B[3] && B[1] - m < A[3]; }
+  libero(u, x, y){
+    if(u.kind === 'elefanti') return true;
+    for(const v of this.units){ if(v === u || v.fuga || v.via || v.side === u.side || v.kind === 'elefanti') continue;
+      if(this.sovrap({ x, y, w: u.w, d: u.d }, v, -1)) return false; }
+    return x > 10 && x < TW - 10 && y > -60 && y < TH + 60;
+  }
+  verso(u, tx, ty, v){
+    const dx = tx - u.x, dy = ty - u.y, n = Math.hypot(dx, dy); if(n < 0.5) return true;
+    const s = Math.min(v, n); const mx = dx / n * s, my = dy / n * s;
+    for(const [a, b] of [[mx, my], [mx * 0.7 - my * 0.7, my * 0.7 + mx * 0.7], [mx * 0.7 + my * 0.7, my * 0.7 - mx * 0.7], [-my, mx], [my, -mx]]){
+      if(this.libero(u, u.x + a, u.y + b)){ u.x += a; u.y += b; return false; } }
+    return false;
+  }
+  vicino(u, f){ let b = null, bd = 1e9; for(const v of this.units){ if(v.fuga || v.via || !f(v)) continue; const d = Math.hypot(v.x - u.x, v.y - u.y); if(d < bd){ bd = d; b = v; } } return b; }
+
+  /* ---------------- CANNE ---------------- */
+  canne(){
+    const c = this.cfg; this.nemico = 'Cartaginesi';
+    // Romani: fanteria molto profonda al centro, cavalleria ai lati
+    for(let r = 0; r < 3; r++) for(let i = 0; i < 8; i++) this.U('R', 'fanteria', 500 + (i - 3.5) * 42, 470 + r * 34, { ruolo: 'centroR', max: 330, w: 40, d: 32, sp: 0.36 });
+    for(let i = 0; i < 3; i++) this.U('R', 'cav', 245 - i * 50, 500, { ruolo: 'cavR', max: 100, nome: 'la cavalleria romana' });
+    for(let i = 0; i < 3; i++) this.U('R', 'cav', 755 + i * 50, 500, { ruolo: 'cavA', max: 100, nome: 'la cavalleria alleata' });
+    // Cartaginesi: Galli e Iberi al centro, Africani ai lati, cavalleria
+    const mezza = c.centro === 'mezzaluna';
+    for(let i = 0; i < 8; i++){ const k = (i - 3.5) / 3.5; this.U('N', 'fanteria', 500 + (i - 3.5) * 42, 250 + (mezza ? 55 * (1 - k * k) : 25), { ruolo: 'galli', max: 300, att: 0.95, defF: 0.95 }); }
+    for(const lato of [-1, 1]) for(let i = 0; i < 3; i++) this.U('N', 'fanteria', 500 + lato * (192 + i * 42), 235, { ruolo: 'africani', lato, max: 300, att: 1.15, defF: 1.1, sp: 0.42 });
+    const forte = c.cavalleria === 'forte';
+    for(let i = 0; i < 4; i++) this.U('N', 'cav', 230 - (i % 2) * 52, 200 + Math.floor(i / 2) * 26, { ruolo: 'cavPesante', max: forte ? 150 : 100, att: forte ? 1.45 : 1.15, nome: 'la cavalleria pesante di Annibale' });
+    for(let i = 0; i < 3; i++) this.U('N', 'cav', 760 + i * 50, 215, { ruolo: 'numidi', max: 110, att: 0.75, sp: 1.5, nome: 'i cavalieri numidi', pl: true });
+  }
+  /* ---------------- ZAMA ---------------- */
+  zama(){
+    const c = this.cfg; this.nemico = 'Cartaginesi';
+    const corr = c.schieramento === 'corridoi';
+    for(let i = 0; i < 9; i++){ const lx = 500 + (i - 4) * 64;
+      this.U('R', 'veliti', lx, 470, { ruolo: 'veliti', state: 'avanza' });
+      this.U('R', 'fanteria', lx, 510, { ruolo: 'hastati', max: 120, w: 34, d: 24, sp: 0.5 });
+      this.U('R', 'fanteria', lx + (corr ? 0 : 32), 560, { ruolo: 'principes', max: 120, w: 34, d: 24, sp: 0.5 });
+      this.U('R', 'fanteria', lx, 610, { ruolo: 'triarii', max: 70, w: 34, d: 16, sp: 0.45, att: 1.1 }); }
+    for(let i = 0; i < 2; i++) this.U('R', 'cav', 160 - i * 50, 540, { ruolo: 'cavR', max: 100, nome: 'la cavalleria romana' });
+    if(c.massinissa === 'si') for(let i = 0; i < 3; i++) this.U('R', 'cav', 845 + i * 48, 540, { ruolo: 'cavR', max: 110, att: 1.25, nome: 'i cavalieri numidi di Massinissa', pl: true, massinissa: true });
+    else for(let i = 0; i < 2; i++) this.U('R', 'cav', 845 + i * 50, 540, { ruolo: 'cavR', max: 90, nome: 'la cavalleria romana' });
+    // Cartaginesi
+    for(let i = 0; i < 8; i++) this.U('N', 'elefanti', 500 + (i - 3.5) * 64 + (this.R() - 0.5) * 20, 160, { ruolo: 'elefanti', state: 'fermo' });
+    for(let i = 0; i < 9; i++) this.U('N', 'fanteria', 500 + (i - 4) * 50, 205, { ruolo: 'mercenari', max: 130, w: 46, d: 26, att: 0.9, defF: 0.95 });
+    for(let i = 0; i < 9; i++) this.U('N', 'fanteria', 500 + (i - 4) * 50, 140, { ruolo: 'cartaginesi', max: 120, w: 46, d: 26, att: 0.8, defF: 0.85 });
+    for(let i = 0; i < 9; i++) this.U('N', 'fanteria', 500 + (i - 4) * 50, 55, { ruolo: 'veterani', max: 140, w: 46, d: 26, att: 1.15, defF: 1.15 });
+    for(let i = 0; i < 2; i++) this.U('N', 'cav', 160 - i * 50, 175, { ruolo: 'cavN', max: 110, nome: 'la cavalleria cartaginese' });
+    for(let i = 0; i < 2; i++) this.U('N', 'cav', 845 + i * 50, 175, { ruolo: 'cavN', max: 110, att: 0.95, nome: 'i cavalieri numidi di Annibale', pl: true });
+  }
+
+  /* ---------------- PASSO ---------------- */
+  step(){
+    if(this.over) return; this.t++;
+    const U = this.units; for(const u of U) u.contatto = false;
+    if(!this.cerchio) this.cerchio = { f: -999, r: -999, l: -999, d: -999 };
+    // combattimento
+    const danni = new Map(); const add = (u, m, c) => { const o = danni.get(u) || { m: 0, c: 0 }; o.m += m; o.c += c; danni.set(u, o); };
+    for(let i = 0; i < U.length; i++){ const a = U[i]; if(a.fuga || a.via) continue;
+      for(let j = i + 1; j < U.length; j++){ const b = U[j]; if(b.fuga || b.via || b.side === a.side) continue;
+        if(!this.sovrap(a, b, 3)) continue;
+        if(a.kind === 'elefanti' || b.kind === 'elefanti'){ this.calpesta(a.kind === 'elefanti' ? a : b, a.kind === 'elefanti' ? b : a); continue; }
+        for(const [att, dif] of [[a, b], [b, a]]){
+          if(att.kind === 'veliti') continue;
+          const ox = Math.min(att.x + att.w / 2, dif.x + dif.w / 2) - Math.max(att.x - att.w / 2, dif.x - dif.w / 2);
+          const oy = Math.min(att.y + att.d / 2, dif.y + dif.d / 2) - Math.max(att.y - att.d / 2, dif.y - dif.d / 2);
+          let rel; if(ox > 8) rel = ((att.y - dif.y) * dif.dir > 0) ? 'fronte' : 'retro'; else if(oy > Math.min(att.d, dif.d) * 0.35) rel = 'fianco'; else continue;
+          a.contatto = b.contatto = true;
+          const L = rel === 'fianco' ? Math.max(6, oy) : Math.max(6, ox);
+          let pot = att.att * (0.35 + 0.65 * att.coh) * (1 - 0.4 * att.fat) * L * TP.K * Math.sqrt(att.men / att.max + 0.05) * (att.calca ? 0.55 : 1);
+          if(att.kind === 'cav' && dif.kind === 'fanteria' && rel === 'fronte') pot *= 0.5;
+          const def = rel === 'fronte' ? dif.defF * (0.35 + 0.65 * dif.coh) : rel === 'fianco' ? dif.defS : dif.defS * 0.7;
+          const mult = rel === 'fronte' ? 1 : rel === 'fianco' ? 1.8 : 2.4;
+          const p = pot * mult / def;
+          let cm = 1; if(dif.ruolo === 'galli' && this.cfg.centro === 'mezzaluna') cm = 0.55;
+          add(dif, p * (dif.ruolo === 'galli' && this.cfg.centro === 'mezzaluna' ? 0.8 : 1), (p / dif.max * 1.1 + (rel !== 'fronte' ? 0.003 : 0)) * cm);
+          if(dif.side === 'R' && dif.kind === 'fanteria'){ if(rel === 'fronte') this.cerchio.f = this.t; else if(rel === 'retro') this.cerchio.r = this.t; else { if(att.x < dif.x) this.cerchio.l = this.t; else this.cerchio.d = this.t; } }
+          if(rel !== 'fronte' && dif.kind === 'fanteria'){
+            if(rel === 'fianco'){ this.stat.fianchi += p; this.evento('fianco' + att.side, att.side === 'N' ? `Gli ${att.ruolo === 'africani' ? 'Africani di Annibale' : 'uomini di Annibale'} attaccano i Romani sul fianco.` : `I Romani colpiscono il nemico sul fianco.`); }
+            else { this.stat.spalle += p; this.stat['spalle' + att.side] = (this.stat['spalle' + att.side] || 0) + p; const nm = att.nome || 'la cavalleria', Nm = nm[0].toUpperCase() + nm.slice(1); this.evento('spalle' + att.side, att.side === 'N' ? `${Nm} ${att.pl ? 'piombano' : 'piomba'} alle spalle della fanteria romana.` : `${Nm} ${att.pl ? 'attaccano' : 'attacca'} alle spalle la fanteria di Annibale!`); }
+          }
+          // a Canne il centro cartaginese cede piano piano
+          if(dif.ruolo === 'galli' && this.cfg.centro === 'mezzaluna' && rel === 'fronte' && dif.y > 200){ dif.cede = 0.14; }
+        }
+      }
+    }
+    for(const [u, d] of danni){ u.men = Math.max(0, u.men - d.m); u.coh = Math.max(0, u.coh - d.c); u.fat = Math.min(1, u.fat + 0.001); }
+
+    const C = this.cerchio, rec = k => this.t - C[k] < 40;
+    if(this.cfg.battaglia === 'canne' && rec('f') && rec('r') && rec('l') && rec('d')){
+      this.circondati = (this.circondati || 0) + 1;
+      this.evento('circondati', 'I Romani sono circondati da tutti i lati: davanti il centro di Annibale, ai lati gli Africani, dietro la cavalleria. Il panico si diffonde.');
+      for(const u of U) if(u.side === 'R' && u.kind === 'fanteria' && !u.fuga && !u.via) u.coh -= 0.0016;
+    }
+    // calca: i Romani troppo stretti non riescono a combattere
+    for(const u of U){ u.calca = false; if(u.fuga || u.via || u.kind !== 'fanteria' || u.side !== 'R' || this.cfg.battaglia !== 'canne') continue;
+      let n = 0; for(const v of U){ if(v !== u && v.side === 'R' && !v.fuga && !v.via && v.kind === 'fanteria' && this.sovrap(u, v, -6)) n++; }
+      if(n >= 2){ u.calca = true; this.stat.calca++; if(u.coh > 0.3) u.coh -= 0.0006; if(this.stat.calca > 400) this.evento('calca', 'Stretti da tre lati, i Romani si ammassano: chi sta in mezzo non riesce nemmeno a usare le armi.'); } }
+
+    // comportamenti
+    for(const u of U){ if(u.fuga || u.via) continue; this.cervello(u); }
+
+    // separazione tra compagni
+    for(let i = 0; i < U.length; i++){ const a = U[i]; if(a.fuga || a.via || a.kind === 'elefanti') continue;
+      for(let j = i + 1; j < U.length; j++){ const b = U[j]; if(b.fuga || b.via || b.side !== a.side || b.kind === 'elefanti') continue;
+        if(!this.sovrap(a, b, -2)) continue;
+        const ox = (a.w + b.w) / 2 - Math.abs(a.x - b.x), oy = (a.d + b.d) / 2 - Math.abs(a.y - b.y);
+        const k = this.cfg.battaglia === 'canne' && a.side === 'R' ? 0.25 : 0.6; // a Canne i Romani sono pressati
+        if(ox < oy){ const s = a.x < b.x ? -1 : 1; const m = Math.min(ox / 2, 1) * k; if(this.libero(a, a.x + s * m, a.y)) a.x += s * m; if(this.libero(b, b.x - s * m, b.y)) b.x -= s * m; }
+        else { const s = a.y < b.y ? -1 : 1; const m = Math.min(oy / 2, 1) * k; if(this.libero(a, a.x, a.y + s * m)) a.y += s * m; if(this.libero(b, b.x, b.y - s * m)) b.y -= s * m; }
+      } }
+
+    // morale
+    for(const u of U){
+      if(u.via) continue;
+      if(u.fuga){ u.y -= u.dir * 1.8; u.x += (u.fx || 0); if(u.y < -50 || u.y > TH + 50 || u.x < -50 || u.x > TW + 50) u.via = true; continue; }
+      if(u.kind === 'veliti' || u.kind === 'elefanti') continue;
+      if(u.coh < 0.14 || u.men < 0.25 * u.max){
+        u.fuga = true; u.fx = (this.R() - 0.5) * 0.8;
+        const chi = u.kind === 'cav' ? (u.nome || 'cavalleria') : ({ centroR: 'un reparto di fanteria romana', galli: 'un reparto di Galli e Iberi', africani: 'un reparto di Africani', hastati: 'un manipolo di hastati', principes: 'un manipolo di principes', triarii: 'un manipolo di triarii', mercenari: 'un reparto di mercenari', cartaginesi: 'un reparto di cittadini cartaginesi', veterani: 'un reparto dei veterani di Annibale' }[u.ruolo] || 'un reparto');
+        if(u.kind === 'cav'){ const Nm = chi[0].toUpperCase() + chi.slice(1); this.evento('fugacav' + u.side + u.ruolo + (u.pl ? 'p' : ''), `${Nm} ${u.pl ? 'sono sconfitti e fuggono' : 'è sconfitta e fugge'} dal campo.`); }
+        else this.evento('fuga' + u.side + u.ruolo, `${chi[0].toUpperCase() + chi.slice(1)} rompe le file e fugge.`);
+        for(const o of U) if(o.side === u.side && o !== u && !o.fuga && Math.hypot(o.x - u.x, o.y - u.y) < 70) o.coh -= 0.04;
+      }
+    }
+    // fine
+    const fr = this.forza('R') / this.init.R, fn = this.forza('N') / this.init.N;
+    if(fr < 0.35 || fn < 0.35 || this.t > 7000){
+      let v = fr < 0.35 && fn >= 0.35 ? 'N' : fn < 0.35 && fr >= 0.35 ? 'R' : (fr > fn ? 'R' : 'N');
+      if(this.t > 7000 && Math.abs(fr - fn) < 0.06) v = 'pari';
+      this.over = { vince: v, fr, fn, t: this.t };
+      this.log.push({ t: this.t, testo: v === 'R' ? 'L\'esercito di Annibale è in rotta: vincono i Romani!' : v === 'N' ? 'I Romani sono in rotta: vince Annibale.' : 'Nessuno riesce a prevalere.' });
+    }
+  }
+
+  calpesta(e, v){
+    if(v.fuga || v.via) return;
+    const dmg = (v.kind === 'cav' ? 0.35 : 0.4) * (e.panico ? 0.8 : 1);
+    v.men = Math.max(0, v.men - dmg); v.coh = Math.max(0, v.coh - 0.006);
+    if(v.side === 'R'){ this.stat.elefDanni += dmg; this.evento('elefColpo', 'Gli elefanti travolgono un manipolo romano!'); }
+    else this.evento('elefAmici', 'Gli elefanti impazziti travolgono le file di Annibale stesso.');
+    e.men -= 0.012 * (v.kind === 'cav' ? 1 : 1.5); if(e.men <= 0){ e.via = true; }
+  }
+
+  cervello(u){
+    const c = this.cfg, R = u.side === 'R';
+    const nem = v => v.side !== u.side;
+    if(u.kind === 'veliti'){
+      if(u.state === 'avanza'){ u.y += u.dir * 0.6; const e = this.vicino(u, v => nem(v)); if(e && Math.abs(e.y - u.y) < 110){ u.state = 'ritiro'; } }
+      else { u.y -= u.dir * 1.2; if(u.y > TH + 30) u.via = true; }
+      return;
+    }
+    if(u.kind === 'elefanti'){
+      // gli elefanti partono subito alla carica
+      if(u.state === 'fermo' && this.t > 40){ u.state = 'carica'; this.evento('carica', 'Annibale lancia gli elefanti alla carica.'); }
+      if(u.state !== 'carica') return;
+      // trombe e grida dei Romani: una parte si spaventa
+      if(!u.deciso && u.y > 330){ u.deciso = true;
+        if(this.R() < 0.38){ u.panico = true; u.dir = -1; this.stat.elefPanico++; this.evento('panico', 'Spaventati da trombe, frecce e grida, molti elefanti si voltano e tornano indietro, verso i Cartaginesi!');
+          u.tx = u.x < 500 ? 150 + this.R() * 80 : 850 - this.R() * 80; } }
+      // corridoi: gli elefanti seguono il varco più vicino
+      if(!u.panico && c.schieramento === 'corridoi' && u.y > 380){
+        const lanes = [0, 1, 2, 3, 4, 5, 6, 7].map(i => 500 + (i - 3.5) * 64);
+        let best = lanes[0]; for(const l of lanes) if(Math.abs(l - u.x) < Math.abs(best - u.x)) best = l;
+        u.x += Math.max(-1, Math.min(1, best - u.x));
+        if(!u.corr && u.y > 470){ u.corr = true; this.stat.elefCorridoio++; this.evento('corridoi', 'Gli elefanti infilano i corridoi lasciati tra i manipoli e passano oltre senza fare danni.'); }
+      }
+      if(u.panico && u.tx) u.x += Math.max(-1.2, Math.min(1.2, u.tx - u.x));
+      u.y += u.dir * u.sp;
+      if(u.y > TH + 40 || u.y < -40) u.via = true;
+      return;
+    }
+    if(u.kind === 'cav'){
+      // cavalleria: prima la cavalleria nemica del proprio lato, poi alle spalle della fanteria
+      const lato = u.x < 500 ? -1 : 1;
+      let tgt = this.vicino(u, v => nem(v) && v.kind === 'cav' && ((v.x < 500 ? -1 : 1) === lato || u.libera));
+      if(u.ruolo === 'numidi' && tgt){ // i Numidi tengono impegnati, senza affondare
+        const d = Math.hypot(tgt.x - u.x, tgt.y - u.y); if(d > 36) this.verso(u, tgt.x, tgt.y, u.sp); return; }
+      if(!tgt){ tgt = this.vicino(u, v => nem(v) && v.kind === 'cav'); if(tgt && !u.libera){ u.libera = true; } }
+      if(this.cfg.battaglia === 'canne' && u.ruolo === 'cavPesante' && !tgt){ /* niente */ }
+      if(tgt && Math.hypot(tgt.x - u.x, tgt.y - u.y) < 420){ if(!u.contatto) this.verso(u, tgt.x, tgt.y + (tgt.y > u.y ? -1 : 1) * 0, u.sp); return; }
+      // nessuna cavalleria nemica vicina: alle spalle della fanteria nemica
+      const fant = this.vivi(v => nem(v) && v.kind === 'fanteria');
+      if(!fant.length) return;
+      const retro = fant.reduce((m, v) => (u.side === 'N' ? Math.max(m, v.y) : Math.min(m, v.y)), u.side === 'N' ? -1e9 : 1e9);
+      const target = this.vicino(u, v => nem(v) && v.kind === 'fanteria' && Math.abs(v.y - retro) < 50);
+      if(target){
+        const ty = target.y + (u.side === 'N' ? 1 : -1) * (target.d / 2 + u.d / 2);
+        if(!u.contatto){
+          // gira largo intorno all'esercito
+          if(Math.abs(u.y - ty) > 30 && Math.abs(u.x - target.x) > 60) this.verso(u, u.x, ty, u.sp);
+          else this.verso(u, target.x, ty, u.sp);
+        }
+        if(!u.allespalle){ u.allespalle = true; this.evento('giro' + u.side, R ? `Vinta la cavalleria nemica, ${u.nome} ${u.pl ? 'girano' : 'gira'} alle spalle dell'esercito di Annibale.` : `Vinta la cavalleria romana, ${u.nome} ${u.pl ? 'girano' : 'gira'} dietro l'esercito romano.`); }
+      }
+      return;
+    }
+    // fanteria
+    if(c.battaglia === 'canne'){
+      if(u.ruolo === 'centroR'){
+        if(!u.contatto){ const e = this.vicino(u, v => nem(v) && v.kind === 'fanteria'); if(e){ const ty = e.y + (u.y > e.y ? 1 : -1) * 0; this.verso(u, u.x + Math.max(-0.3, Math.min(0.3, (e.x - u.x) * 0.02)), u.y - 5, u.sp); } }
+        return;
+      }
+      if(u.ruolo === 'galli'){
+        if(u.cede){ if(this.libero(u, u.x, u.y - u.cede)) u.y -= u.cede; u.cede = 0; this.evento('cede', 'Il centro di Annibale arretra piano piano, senza rompersi: la mezzaluna si rovescia e i Romani ci entrano dentro.'); }
+        else if(!u.contatto && this.t > 150 && c.centro !== 'mezzaluna' && u.y < 290) u.y += 0.15;
+        return;
+      }
+      if(u.ruolo === 'africani'){
+        if(u.state === 'fermo'){
+          const romani = this.vivi(v => v.side === 'R' && v.ruolo === 'centroR');
+          const fronte = romani.length ? Math.min(...romani.map(v => v.y)) : 999;
+          if(fronte < 320 || this.t > 1800){ u.state = 'attacca'; this.evento('africani', 'Ora Annibale fa muovere gli Africani, rimasti fermi ai lati: si chiudono sui fianchi dei Romani.'); }
+          return;
+        }
+        if(!u.contatto){ const e = this.vicino(u, v => v.side === 'R' && v.kind === 'fanteria');
+          if(e){ const tx = e.x + u.lato * (e.w / 2 + u.w / 2), ty = e.y; this.verso(u, tx, ty, u.sp); } }
+        return;
+      }
+      return;
+    }
+    // ZAMA
+    const fant = v => nem(v) && v.kind === 'fanteria';
+    const elefInArrivo = this.vivi(v => v.kind === 'elefanti' && !v.panico && v.y < 520).length > 0;
+    if(R){
+      if(u.ruolo === 'hastati'){ if(elefInArrivo) return; if(!u.contatto){ const e = this.vicino(u, fant); if(e) this.verso(u, u.x + Math.max(-0.4, Math.min(0.4, e.x - u.x)), u.y - 5, u.sp); } return; }
+      // principes e triarii: entrano quando davanti si apre un vuoto o il nemico è vicino
+      if(u.state === 'fermo'){
+        const davanti = this.vivi(v => v.side === 'R' && v.kind === 'fanteria' && v !== u && Math.abs(v.x - u.x) < 40 && v.y < u.y);
+        const e = this.vicino(u, fant);
+        if(!elefInArrivo && (!davanti.length || (e && Math.hypot(e.x - u.x, e.y - u.y) < 70) || this.t > (u.ruolo === 'principes' ? 1500 : 2300))) u.state = 'attacca';
+        else if(davanti.length && !elefInArrivo){ const fr = Math.max(...davanti.map(v => v.y)); if(u.y - fr > 60) this.verso(u, u.x, u.y - 3, u.sp * 0.6); }
+        return;
+      }
+      if(!u.contatto){ const e = this.vicino(u, fant); if(e) this.verso(u, e.x, e.y, u.sp); }
+      return;
+    }
+    // Cartaginesi a Zama
+    if(u.ruolo === 'mercenari'){ if(this.t < 160) return; if(!u.contatto){ const e = this.vicino(u, fant); if(e) this.verso(u, u.x + Math.max(-0.4, Math.min(0.4, e.x - u.x)), u.y + 5, u.sp); } return; }
+    if(u.ruolo === 'cartaginesi'){ if(this.t < 260) return;
+      const davanti = this.vivi(v => v.ruolo === 'mercenari' && Math.abs(v.x - u.x) < 45);
+      if(davanti.length && !u.contatto){ const fr = Math.min(...davanti.map(v => v.y)); if(fr - u.y > 70) this.verso(u, u.x, u.y + 3, u.sp); return; }
+      if(!u.contatto){ const e = this.vicino(u, fant); if(e) this.verso(u, e.x, e.y, u.sp); } return; }
+    if(u.ruolo === 'veterani'){
+      const altri = this.vivi(v => v.side === 'N' && (v.ruolo === 'mercenari' || v.ruolo === 'cartaginesi')).length;
+      if(altri > 6 && this.t < 2600){ if(this.vicino(u, fant) && Math.hypot(this.vicino(u, fant).x - u.x, this.vicino(u, fant).y - u.y) < 60) u.state = 'attacca'; if(u.state !== 'attacca') return; }
+      if(u.state !== 'attacca'){ u.state = 'attacca'; this.evento('veterani', 'Entrano in battaglia i veterani di Annibale, che avevano combattuto con lui in Italia.'); }
+      if(!u.contatto){ const e = this.vicino(u, fant); if(e) this.verso(u, e.x, e.y, u.sp); }
+    }
+  }
+}
+if(typeof module !== 'undefined') module.exports = { Terra, TW, TH };
+
+/* Battaglia navale: Milazzo (260 a.C.) */
+const MW = 1000, MH = 700;
+function mrng(seed){ let s = seed >>> 0; return () => { s = (s * 1664525 + 1013904223) >>> 0; return s / 4294967296; }; }
+const ang = a => { while(a > Math.PI) a -= 2 * Math.PI; while(a < -Math.PI) a += 2 * Math.PI; return a; };
+
+class Mare {
+  constructor(cfg){
+    this.cfg = cfg; this.R = mrng(cfg.seed || 1); this.t = 0; this.log = []; this.flags = {}; this.over = null; this.navi = []; this.schizzi = [];
+    this.stat = { speronate: 0, abbordaggi: 0, catturate: { R: 0, N: 0 }, affondate: { R: 0, N: 0 }, naufragi: 0 };
+    this.mosso = cfg.mare === 'mosso'; this.corvi = cfg.corvi === 'si';
+    for(let i = 0; i < 16; i++){ const r = Math.floor(i / 8), k = i % 8;
+      this.nave('R', 150 + k * 100 + (r ? 50 : 0), 640 - r * 55, -Math.PI / 2); }
+    for(let i = 0; i < 16; i++){ const r = Math.floor(i / 8), k = i % 8;
+      this.nave('N', 150 + k * 100 + (r ? 50 : 0), 60 + r * 55, Math.PI / 2); }
+    this.init = { R: 16, N: 16 };
+  }
+  nave(side, x, y, a){
+    const R = side === 'R';
+    this.navi.push({ side, x, y, a, v: 0, id: this.navi.length, scafo: 100, equip: 100,
+      vmax: (R ? 1.05 : 1.45) * (0.95 + 0.1 * this.R()), virata: R ? 0.016 : 0.032, abilita: R ? 0.55 : 1.0,
+      fanti: R ? 1.6 : 0.8, corvo: R && this.corvi, legata: null, stato: 'ok', pausa: 0, len: 34, wid: 9, remi: this.R() * 6 });
+  }
+  evento(k, testo){ if(k && this.flags[k]) return; if(k) this.flags[k] = 1; this.log.push({ t: this.t, testo }); }
+  attive(side){ return this.navi.filter(n => n.side === side && n.stato === 'ok'); }
+  forza(side){ return this.attive(side).length; }
+  prua(n, d = n.len / 2){ return [n.x + Math.cos(n.a) * d, n.y + Math.sin(n.a) * d]; }
+  // distanza di un punto dallo scafo (rettangolo orientato) e lato colpito
+  locale(n, px, py){ const dx = px - n.x, dy = py - n.y, c = Math.cos(-n.a), s = Math.sin(-n.a); return [dx * c - dy * s, dx * s + dy * c]; }
+  dentro(n, px, py, m = 0){ const [lx, ly] = this.locale(n, px, py); return Math.abs(lx) < n.len / 2 + m && Math.abs(ly) < n.wid / 2 + m; }
+
+  step(){
+    if(this.over) return; this.t++;
+    const N = this.navi, R = this.R, mosso = this.mosso;
+    for(const n of N){
+      if(n.stato !== 'ok') { if(n.stato === 'affonda'){ n.v *= 0.97; n.aff = (n.aff || 0) + 1; } continue; }
+      n.remi += n.v * 0.35 + 0.05;
+      if(n.legata){ n.v *= 0.9; continue; }
+      if(n.pausa > 0){ n.pausa--; n.v = Math.max(-0.4, n.v - 0.05); n.x += Math.cos(n.a) * n.v; n.y += Math.sin(n.a) * n.v; continue; }
+      // bersaglio
+      const nem = N.filter(m => m.side !== n.side && m.stato === 'ok');
+      if(!nem.length) continue;
+      let tgt = null, bd = 1e9;
+      for(const m of nem){ const d = Math.hypot(m.x - n.x, m.y - n.y) + (m.legata ? 200 : 0); if(d < bd){ bd = d; tgt = m; } }
+      let tx = tgt.x + Math.cos(tgt.a) * tgt.v * 20, ty = tgt.y + Math.sin(tgt.a) * tgt.v * 20;
+      if(n.side === 'N'){
+        // i Cartaginesi cercano il fianco: puntano al centro dello scafo da un lato
+        const lato = Math.sign(Math.sin(ang(Math.atan2(n.y - tgt.y, n.x - tgt.x) - tgt.a))) || 1;
+        const off = bd > 90 ? 60 : 0;
+        tx += Math.cos(tgt.a + lato * Math.PI / 2) * off; ty += Math.sin(tgt.a + lato * Math.PI / 2) * off;
+        // se la prua romana col corvo lo punta da vicino, si scansa
+        if(tgt.corvo && bd < 70){ const [bx, by] = this.prua(tgt); const verso = ang(Math.atan2(n.y - tgt.y, n.x - tgt.x) - tgt.a); if(Math.abs(verso) < 0.6){ tx = n.x + Math.cos(n.a + 1.2) * 50; ty = n.y + Math.sin(n.a + 1.2) * 50; } }
+      }
+      const da = ang(Math.atan2(ty - n.y, tx - n.x) - n.a);
+      const vir = n.virata * (mosso ? 0.8 : 1);
+      n.a = ang(n.a + Math.max(-vir, Math.min(vir, da)));
+      const vt = n.vmax * (mosso ? 0.82 : 1) * (Math.abs(da) > 1.2 ? 0.6 : 1);
+      n.v += Math.max(-0.03, Math.min(0.03, vt - n.v));
+      // mare mosso: le navi col corvo, pesanti in prua, possono rovesciarsi
+      if(mosso && n.corvo && R() < 0.0009 + Math.abs(da) * 0.0012){ n.stato = 'affonda'; this.stat.naufragi++; this.stat.affondate[n.side]++;
+        this.evento('naufragio', 'Il mare è mosso: una nave romana, appesantita dal corvo, si rovescia e affonda.'); continue; }
+    }
+    // movimento e onde
+    for(const n of N){ if(n.stato === 'catturata' || n.stato === 'affonda') continue; if(n.legata) continue;
+      n.x += Math.cos(n.a) * n.v; n.y += Math.sin(n.a) * n.v;
+      if(mosso){ n.x += (R() - 0.5) * 0.5; n.y += (R() - 0.5) * 0.5; }
+      n.x = Math.max(20, Math.min(MW - 20, n.x)); n.y = Math.max(20, Math.min(MH - 20, n.y)); }
+    // speronamenti e corvi
+    for(const n of N){ if(n.stato !== 'ok' || n.legata) continue;
+      const [px, py] = this.prua(n, n.len / 2 + 3);
+      for(const m of N){ if(m === n || m.stato !== 'ok' || m.side === n.side) continue;
+        const dist = Math.hypot(m.x - n.x, m.y - n.y); if(dist > 70) continue;
+        // corvo: un bersaglio davanti alla prua, a breve distanza
+        if(n.corvo && !m.legata){
+          const [cx, cy] = this.prua(n, n.len / 2 + 14);
+          if(this.dentro(m, cx, cy, 6) || this.dentro(m, px, py, 4)){
+            n.legata = m; m.legata = n; n.v = m.v = 0; this.stat.abbordaggi++;
+            this.evento('corvo', 'Un corvo cala sulla nave cartaginese e la aggancia: i legionari passano all\'arrembaggio, come in una battaglia di terra.');
+            break; }
+        }
+        // speronamento: la prua colpisce lo scafo nemico
+        if(this.dentro(m, px, py, 1)){
+          const vrel = n.v - m.v * Math.cos(m.a - n.a);
+          const angolo = Math.abs(Math.sin(ang(m.a - n.a)));
+          if(vrel > (n.side === 'R' ? 0.8 : 0.5) && (n.side === 'N' || angolo > 0.5)){
+            const danno = (6 + 16 * angolo) * n.abilita * Math.min(1.6, vrel) * (mosso ? 0.8 : 1);
+            m.scafo -= danno; n.v = -0.3; n.pausa = 70; this.stat.speronate++; this.stat['sper' + n.side] = (this.stat['sper' + n.side] || 0) + 1;
+            this.schizzi.push({ x: px, y: py, t: 0 });
+            this.evento('rostro' + n.side, n.side === 'N' ? 'Una nave cartaginese, più veloce e manovrata da rematori esperti, sperona una nave romana con il rostro.' : 'Una nave romana riesce a speronare una nave cartaginese.');
+            if(m.scafo <= 0){ m.stato = 'affonda'; this.stat.affondate[m.side]++; if(m.legata){ m.legata.legata = null; m.legata = null; }
+              this.evento('affonda' + m.side, m.side === 'R' ? 'Una nave romana, squarciata, affonda.' : 'Una nave cartaginese affonda.'); }
+          }
+        }
+      } }
+    // arrembaggi: combattimento tra gli equipaggi delle navi legate
+    for(const n of N){ if(n.stato !== 'ok' || !n.legata || n.side !== 'R') continue;
+      const m = n.legata; if(m.stato !== 'ok'){ n.legata = null; continue; }
+      m.equip -= 0.16 * n.fanti * (0.5 + n.equip / 200); n.equip -= 0.16 * m.fanti * (0.5 + m.equip / 200);
+      if(m.equip <= 0){ m.stato = 'catturata'; this.stat.catturate.R++; n.legata = null; m.legata = null; n.pausa = 30;
+        this.evento('cattura', 'I legionari conquistano la nave nemica: è catturata.'); }
+      else if(n.equip <= 0){ n.stato = 'catturata'; this.stat.catturate.N++; n.legata = null; m.legata = null; }
+    }
+    for(const s of this.schizzi) s.t += 0.03; this.schizzi = this.schizzi.filter(s => s.t < 1);
+    // fine
+    const fr = this.forza('R') / this.init.R, fn = this.forza('N') / this.init.N;
+    if(fr <= 0.3 || fn <= 0.3 || this.t > 6000){
+      const v = fr <= 0.3 && fn > 0.3 ? 'N' : fn <= 0.3 && fr > 0.3 ? 'R' : (fr > fn + 0.06 ? 'R' : fn > fr + 0.06 ? 'N' : 'pari');
+      this.over = { vince: v, fr, fn, t: this.t };
+      this.log.push({ t: this.t, testo: v === 'R' ? 'La flotta cartaginese si ritira: vincono i Romani!' : v === 'N' ? 'La flotta romana è distrutta: vincono i Cartaginesi.' : 'Le due flotte si separano senza un vincitore.' });
+    }
+  }
+}
+if(typeof module !== 'undefined') module.exports = { Mare, MW, MH };
+
+{
+const cv=document.getElementById('cv'), ctx=cv.getContext('2d');
+const B={
+  milazzo:{ intro:`<p>Nel <b>260 a.C.</b> Roma, che aveva appena costruito la sua prima grande flotta con equipaggi poco esperti, vinse nelle acque di <b>Milazzo</b> grazie ai <b>corvi</b>: ponti di legno muniti di arpioni che si ancoravano alle navi nemiche e permettevano ai legionari di andare all'arrembaggio, combattendo corpo a corpo come in una battaglia di terra.</p>
+    <p class="piu"><b>In più.</b> I Cartaginesi erano maestri nello <b>speronare</b> con il rostro, la punta di bronzo sulla prua. Secondo alcuni storici il corvo, pesante in prua, rendeva le navi instabili con il mare mosso: il libro ricorda che Roma subì «una serie di naufragi». Qui ogni nave disegnata ne rappresenta parecchie.</p>`,
+    scelte:[['corvi','Le navi romane',[['si','con i corvi'],['no','senza corvi']]],['mare','Il mare',[['calmo','calmo'],['mosso','mosso']]]],
+    vel:[1,2,4] },
+  canne:{ intro:`<p>Nel <b>216 a.C.</b>, a <b>Canne</b> (vicino a Barletta), Annibale inflisse ai Romani una pesantissima sconfitta con una manovra di <b>doppio accerchiamento</b>, riuscita grazie alla <b>cavalleria cartaginese</b>: circa 50.000 caduti e 20.000 prigionieri.</p>
+    <p class="piu"><b>In più.</b> Secondo lo storico Polibio, Annibale mise al centro Galli e Iberi in una linea curva, a <b>mezzaluna</b>, con le punte verso i Romani, e ai lati, un po' indietro, i veterani africani. I Romani erano circa 80.000 fanti, Annibale circa 40.000 fanti ma 10.000 cavalieri: la simulazione rispetta queste proporzioni.</p>`,
+    scelte:[['centro','Il centro di Annibale',[['mezzaluna','a mezzaluna'],['dritto','in linea dritta']]],['cavalleria','La cavalleria cartaginese',[['forte','più forte (come a Canne)'],['pari','pari a quella romana']]]],
+    vel:[2,5,10] },
+  zama:{ intro:`<p>Nel <b>202 a.C.</b>, a <b>Zama</b> (oggi in Tunisia), Scipione sconfisse Annibale. Gli <b>elefanti</b>, fino ad allora un'arma formidabile, furono spaventati con <b>frecce, trombe e grida</b> e, impazziti, fecero più danni ai Cartaginesi che ai Romani.</p>
+    <p class="piu"><b>In più.</b> Secondo Polibio, Scipione non schierò i manipoli a scacchiera ma uno dietro l'altro, lasciando dei <b>corridoi</b> in cui gli elefanti potessero passare senza fare danni. Fu decisiva anche la cavalleria numida del re <b>Massinissa</b>, passato dalla parte di Roma.</p>`,
+    scelte:[['schieramento','I manipoli di Scipione',[['corridoi','in colonne, con i corridoi'],['scacchiera','a scacchiera']]],['massinissa','La cavalleria di Massinissa',[['si','con Massinissa'],['no','senza Massinissa']]]],
+    vel:[2,5,10] }
+};
+const scelta={ milazzo:{corvi:'si',mare:'calmo'}, canne:{centro:'mezzaluna',cavalleria:'forte'}, zama:{schieramento:'corridoi',massinissa:'si'} };
+let bt='milazzo', S=null, run=false, velK=0, fondo=null, fondoKey='';
+
+function tabs(){ document.querySelectorAll('.tab').forEach(t=>{ t.classList.toggle('on',t.dataset.b===bt); t.onclick=()=>{ bt=t.dataset.b; tabs(); nuova(); }; }); }
+function controlli(){
+  document.getElementById('intro').innerHTML=B[bt].intro;
+  const c=document.getElementById('ctrl'); c.innerHTML='';
+  for(const [key,tit,opz] of B[bt].scelte){
+    const g=document.createElement('div'); g.className='grp'; g.innerHTML=`<b>${tit}</b><div class="seg"></div>`;
+    const seg=g.querySelector('.seg');
+    for(const [v,t] of opz){ const b=document.createElement('button'); b.textContent=t; b.className=scelta[bt][key]===v?'on':''; b.onclick=()=>{ scelta[bt][key]=v; controlli(); nuova(true); }; seg.appendChild(b); }
+    c.appendChild(g);
+  }
+  document.querySelectorAll('#vel button').forEach((b,i)=>{ b.classList.toggle('on',i===velK); b.onclick=()=>{ velK=i; controlli(); }; });
+}
+function nuova(soloSim){
+  const seed=(Math.random()*1e9)|0;
+  S = bt==='milazzo' ? new Mare(Object.assign({seed},scelta.milazzo)) : new Terra(Object.assign({seed,battaglia:bt},scelta[bt]));
+  run=false; document.getElementById('b-via').textContent='▶ Via!';
+  document.getElementById('ris').className='ris'; document.getElementById('log').innerHTML='<p>Premi «Via!» per cominciare.</p>'; ultimo=-1;
+  if(!soloSim) controlli(); legenda(); disegna(); pannello();
+}
+document.getElementById('b-via').onclick=()=>{ if(!S||S.over) nuova(true); run=!run; document.getElementById('b-via').textContent=run?'❚❚ Pausa':'▶ Riprendi'; };
+document.getElementById('b-reset').onclick=()=>nuova(true);
+
+/* ---------- colori ---------- */
+function colore(u){
+  if(u.side==='R'){ return { centroR:'#b8432a', hastati:'#cf5a3b', principes:'#a23a22', triarii:'#7a2814', veliti:'#d8916f' }[u.ruolo] || (u.kind==='cav' ? (u.massinissa ? '#c9a227' : (u.ruolo==='cavA' ? '#e3955f' : '#e07b39')) : '#b8432a'); }
+  return { galli:'#4f86b0', africani:'#1f4f73', mercenari:'#4f86b0', cartaginesi:'#2f5f86', veterani:'#183e5c' }[u.ruolo] || (u.kind==='cav' ? (u.ruolo==='numidi'||u.pl ? '#8a7cc0' : '#5b4a8a') : u.kind==='elefanti' ? '#80838b' : '#2f5f86');
+}
+function legenda(){
+  let L=[];
+  if(bt==='milazzo') L=[['#b8432a','navi romane'],['#2f5f86','navi cartaginesi'],['#8a6a3a','corvo (ponte d\'abbordaggio)'],['#9aa3a8','nave catturata o affondata']];
+  if(bt==='canne') L=[['#b8432a','fanteria romana'],['#e07b39','cavalleria romana'],['#e3955f','cavalleria alleata'],['#4f86b0','Galli e Iberi'],['#1f4f73','fanti africani'],['#5b4a8a','cavalleria pesante'],['#8a7cc0','cavalieri numidi']];
+  if(bt==='zama') L=[['#d8916f','veliti'],['#cf5a3b','hastati'],['#a23a22','principes'],['#7a2814','triarii'],['#e07b39','cavalleria romana']].concat(scelta.zama.massinissa==='si'?[['#c9a227','cavalieri di Massinissa']]:[]).concat([['#80838b','elefanti'],['#4f86b0','mercenari'],['#2f5f86','Cartaginesi'],['#183e5c','veterani'],['#5b4a8a','cavalleria di Annibale']]);
+  document.getElementById('leg').innerHTML=L.map(([c,t])=>`<span><i class="sw" style="background:${c}"></i>${t}</span>`).join('');
+}
+/* ---------- sfondi ---------- */
+function sfondo(){
+  const key=bt+(bt==='milazzo'?scelta.milazzo.mare:''); if(fondo&&fondoKey===key) return fondo;
+  const c=document.createElement('canvas'); c.width=1000; c.height=700; const g=c.getContext('2d');
+  const R=(()=>{let s=7;return()=>((s=(s*16807)%2147483647)/2147483647);})();
+  if(bt==='milazzo'){
+    const gr=g.createLinearGradient(0,0,0,700); gr.addColorStop(0,'#2d6f8f'); gr.addColorStop(1,'#3f88a6'); g.fillStyle=gr; g.fillRect(0,0,1000,700);
+    // costa siciliana in basso a destra
+    g.fillStyle='#d9cfa8'; g.beginPath(); g.moveTo(1000,560); g.bezierCurveTo(930,590,880,660,860,700); g.lineTo(1000,700); g.fill();
+    g.fillStyle='rgba(60,50,30,.6)'; g.font='italic 15px Georgia'; g.textAlign='right'; g.fillText('costa di Milazzo',990,690);
+  } else if(bt==='canne'){
+    g.fillStyle='#d8d6a4'; g.fillRect(0,0,1000,700);
+    for(let i=0;i<2600;i++){ g.fillStyle=`rgba(120,120,60,${0.06+R()*0.1})`; g.fillRect(R()*1000,R()*700,2,2+R()*3); }
+    g.strokeStyle='#6fa3c0'; g.lineWidth=16; g.lineCap='round'; g.beginPath(); g.moveTo(40,-10); g.bezierCurveTo(70,200,20,420,60,710); g.stroke();
+    g.strokeStyle='#9cc4d8'; g.lineWidth=5; g.stroke();
+    g.save(); g.translate(28,330); g.rotate(-Math.PI/2); g.fillStyle='rgba(40,70,90,.75)'; g.font='italic 14px Georgia'; g.textAlign='center'; g.fillText('fiume Aufidus (Ofanto)',0,0); g.restore();
+  } else {
+    g.fillStyle='#e0cf9f'; g.fillRect(0,0,1000,700);
+    for(let i=0;i<2800;i++){ g.fillStyle=`rgba(140,110,60,${0.05+R()*0.1})`; g.fillRect(R()*1000,R()*700,2,2); }
+  }
+  if(bt!=='milazzo'){ g.font='600 15px -apple-system,Helvetica,sans-serif'; g.fillStyle='rgba(42,38,34,.55)'; g.textAlign='center'; g.fillText('ANNIBALE',500,22); g.fillText(bt==='canne'?'ROMANI':'SCIPIONE',500,690); }
+  fondo=c; fondoKey=key; return c;
+}
+function hash(i){ const x=Math.sin(i*127.1)*43758.5453; return x-Math.floor(x); }
+let onda=0;
+function disegna(){
+  ctx.drawImage(sfondo(),0,0);
+  if(bt==='milazzo') disegnaMare(); else disegnaTerra();
+}
+function disegnaTerra(){
+  const div = bt==='canne' ? 20 : 6;
+  for(const u of S.units){ if(u.via) continue;
+    ctx.globalAlpha=u.fuga?0.45:1;
+    if(u.kind==='elefanti'){ ctx.fillStyle=colore(u); ctx.beginPath(); ctx.ellipse(u.x,u.y,8,12,0,0,7); ctx.fill(); ctx.fillStyle='#f4efe2'; ctx.fillRect(u.x-4,u.y+u.dir*11,2,5); ctx.fillRect(u.x+2,u.y+u.dir*11,2,5);
+      if(u.panico){ ctx.fillStyle='#c0392b'; ctx.font='700 13px sans-serif'; ctx.textAlign='center'; ctx.fillText('!',u.x,u.y-15); } ctx.globalAlpha=1; continue; }
+    const n=Math.max(1,Math.ceil(u.men/(u.kind==='cav'?div*0.5:div))), cav=u.kind==='cav', loose=u.kind==='veliti'||u.ruolo==='numidi';
+    const cols=Math.max(1,Math.round(u.w/(cav?8:6))), rows=Math.ceil(Math.ceil(u.max/(cav?div*0.5:div))/cols);
+    const sx=u.w/cols, sy=u.d/Math.max(rows,1), dis=u.fuga?14:(1-u.coh)*7+(loose?2.5:0);
+    ctx.fillStyle=colore(u);
+    for(let i=0;i<n;i++){ const c=i%cols, r=Math.floor(i/cols);
+      const x=u.x-u.w/2+(c+0.5)*sx+(hash(u.id*997+i)-0.5)*dis*2, y=u.y+u.dir*u.d/2-u.dir*(r+0.5)*sy+(hash(u.id*631+i*3)-0.5)*dis*2;
+      if(cav) ctx.fillRect(x-3,y-1.6,6,3.2); else ctx.fillRect(x-1.8,y-1.8,3.6,3.6); }
+    if(u.contatto&&!u.fuga){ ctx.globalAlpha=0.55; ctx.fillStyle='#fff3c4'; ctx.fillRect(u.x-u.w/2,u.y+u.dir*u.d/2-1.5,u.w,3); }
+    ctx.globalAlpha=1;
+  }
+}
+function disegnaMare(){
+  onda+=0.02; const mosso=scelta.milazzo.mare==='mosso';
+  ctx.strokeStyle=mosso?'rgba(255,255,255,.35)':'rgba(255,255,255,.16)'; ctx.lineWidth=1.4;
+  for(let i=0;i<(mosso?90:50);i++){ const x=(hash(i)*1100+onda*(20+hash(i+9)*20))%1050-25, y=hash(i+3)*700; ctx.beginPath(); ctx.moveTo(x,y); ctx.quadraticCurveTo(x+8,y-(mosso?5:3),x+16,y); ctx.stroke(); }
+  for(const n of S.navi){
+    let alpha=1; if(n.stato==='affonda'){ alpha=Math.max(0,1-(n.aff||0)/160); if(alpha<=0) continue; }
+    ctx.save(); ctx.translate(n.x,n.y); ctx.rotate(n.a); ctx.globalAlpha=alpha;
+    const L=n.len/2, Wd=n.wid/2;
+    // remi
+    if(n.stato==='ok'){ ctx.strokeStyle='rgba(60,40,20,.75)'; ctx.lineWidth=1;
+      for(let k=-3;k<=3;k++){ const sw=Math.sin(n.remi+k*0.3)*3; ctx.beginPath(); ctx.moveTo(k*4,-Wd); ctx.lineTo(k*4+sw,-Wd-6); ctx.moveTo(k*4,Wd); ctx.lineTo(k*4+sw,Wd+6); ctx.stroke(); } }
+    // scafo
+    const col = n.stato==='catturata' ? '#9aa3a8' : n.stato==='affonda' ? '#7d878c' : (n.side==='R'?'#b8432a':'#2f5f86');
+    ctx.fillStyle=col; ctx.beginPath(); ctx.moveTo(L+5,0); ctx.lineTo(L-6,-Wd); ctx.lineTo(-L,-Wd+1); ctx.lineTo(-L-2,0); ctx.lineTo(-L,Wd-1); ctx.lineTo(L-6,Wd); ctx.closePath(); ctx.fill();
+    ctx.fillStyle='rgba(255,255,255,.25)'; ctx.fillRect(-L+4,-1.2,2*L-12,2.4);
+    // corvo
+    if(n.corvo&&n.stato==='ok'&&!n.legata){ ctx.strokeStyle='#8a6a3a'; ctx.lineWidth=3; ctx.beginPath(); ctx.moveTo(L-8,0); ctx.lineTo(L+2,0); ctx.stroke(); ctx.fillStyle='#5d4524'; ctx.fillRect(L-9,-2,3,4); }
+    if(n.stato==='catturata'){ ctx.fillStyle='#b8432a'; ctx.fillRect(-4,-7,7,5); }
+    ctx.restore(); ctx.globalAlpha=1;
+    if(n.legata&&n.side==='R'&&n.stato==='ok'){ const [px,py]=S.prua(n,n.len/2+2); ctx.strokeStyle='#8a6a3a'; ctx.lineWidth=4; ctx.beginPath(); ctx.moveTo(px,py); ctx.lineTo(n.legata.x,n.legata.y); ctx.stroke();
+      for(let k=0;k<6;k++){ const t=hash(n.id*31+k+Math.floor(S.t/6)); ctx.fillStyle=k%2?'#b8432a':'#2f5f86'; ctx.fillRect(px+(n.legata.x-px)*t-1.5+(hash(k)-0.5)*6, py+(n.legata.y-py)*t-1.5+(hash(k+5)-0.5)*6,3,3); } }
+    if(n.stato==='affonda'){ ctx.strokeStyle='rgba(255,255,255,.6)'; ctx.beginPath(); ctx.arc(n.x,n.y,6+((n.aff||0)%40)/2,0,7); ctx.stroke(); }
+  }
+  for(const s of S.schizzi){ ctx.strokeStyle=`rgba(255,255,255,${1-s.t})`; ctx.lineWidth=2; ctx.beginPath(); ctx.arc(s.x,s.y,4+s.t*16,0,7); ctx.stroke(); }
+}
+/* ---------- pannello e cronaca ---------- */
+let ultimo=-1;
+function minuto(t){ return Math.round(t/(bt==='milazzo'?20:40)); }
+function pannello(){
+  const nome = bt==='milazzo' ? 'Cartaginesi' : 'Annibale';
+  const riga=(t,v,c,txt)=>`<div class="riga"><span>${t}</span><div class="tr"><i style="width:${Math.max(0,Math.min(1,v))*100}%;background:${c}"></i></div><span class="num">${txt}</span></div>`;
+  let h='';
+  if(bt==='milazzo'){ document.getElementById('h-forze').textContent='Navi in battaglia';
+    h=riga('Romani',S.forza('R')/16,'#b8432a',S.forza('R'))+riga('Cartaginesi',S.forza('N')/16,'#2f5f86',S.forza('N'))+
+      `<div style="font:13px -apple-system,sans-serif;color:#6f655a;margin-top:8px">Catturate dai Romani: <b>${S.stat.catturate.R}</b> · Affondate: romane <b>${S.stat.affondate.R}</b>, cartaginesi <b>${S.stat.affondate.N}</b>${S.stat.naufragi?` · Naufragi: <b>${S.stat.naufragi}</b>`:''}</div>`;
+  } else { document.getElementById('h-forze').textContent='Fanteria in campo';
+    const fR=S.forza('R')/S.init.R, fN=S.forza('N')/S.init.N;
+    h=riga('Romani',fR,'#b8432a',Math.round(fR*100)+'%')+riga(nome,fN,'#2f5f86',Math.round(fN*100)+'%')+
+      `<div style="font:12px -apple-system,sans-serif;color:#6f655a;margin:6px 0">Compattezza delle file</div>`+riga('Romani',S.coesione('R'),'#e3a083',Math.round(S.coesione('R')*100)+'%')+riga(nome,S.coesione('N'),'#9cb3c9',Math.round(S.coesione('N')*100)+'%'); }
+  document.getElementById('forze').innerHTML=h;
+  if(S.log.length!==ultimo){ ultimo=S.log.length; if(S.log.length) document.getElementById('log').innerHTML=S.log.slice().reverse().map(e=>`<p><time>min ${minuto(e.t)}</time>${e.testo}</p>`).join(''); }
+}
+function spiegazione(){
+  const o=S.over, s=S.stat, c=scelta[bt]; const p=[];
+  let titolo = o.vince==='R'?'Vincono i Romani':o.vince==='N'?(bt==='milazzo'?'Vincono i Cartaginesi':'Vince Annibale'):'Nessun vincitore';
+  if(bt==='milazzo'){
+    if(c.corvi==='si') p.push(`Con i corvi i Romani hanno agganciato <b>${s.abbordaggi}</b> navi e ne hanno catturate <b>${s.catturate.R}</b>: la battaglia navale è diventata una battaglia di fanteria, dove i legionari erano più forti.`);
+    else p.push(`Senza corvi i Romani hanno dovuto combattere come i Cartaginesi, speronando: ma le loro navi erano più lente e i rematori meno esperti. Le navi cartaginesi hanno speronato <b>${s.sperN||0}</b> volte, quelle romane <b>${s.sperR||0}</b>.`);
+    if(c.mare==='mosso'&&c.corvi==='si') p.push(`Con il mare mosso <b>${s.naufragi}</b> navi romane si sono rovesciate: il corvo le appesantiva in prua (riquadro «In più»).`);
+    if(c.mare==='mosso'&&c.corvi!=='si') p.push('Con il mare mosso le navi sono più lente e speronare è più difficile, ma l\'abilità dei marinai cartaginesi resta decisiva.');
+    p.push('Nella realtà, a Milazzo (260 a.C.) i Romani avevano i corvi e ottennero una netta vittoria.');
+  } else if(bt==='canne'){
+    if(c.centro==='mezzaluna') p.push('Il centro a mezzaluna ha ceduto piano piano senza rompersi: i Romani, spingendo, ci sono entrati dentro come in un sacco.');
+    else p.push('Con il centro in linea dritta, Galli e Iberi hanno dovuto reggere tutto l\'urto dei Romani, molto più numerosi, e il sacco non si è formato.');
+    if(s.fianchi>200) p.push('Gli Africani, rimasti fermi ai lati, si sono chiusi sui fianchi dei Romani.');
+    if(c.cavalleria==='forte') p.push((s.spalleN||0)>40?'La cavalleria cartaginese ha vinto quella romana e poi ha colpito la fanteria alle spalle: l\'accerchiamento si è chiuso.':'La cavalleria cartaginese ha vinto la sua battaglia, ma non è riuscita a colpire in tempo alle spalle.');
+    else p.push('Con una cavalleria pari a quella romana, Annibale non ha potuto chiudere il cerchio alle spalle dei Romani.');
+    if(S.circondati) p.push('Circondati, i Romani non potevano usare il loro numero: chi stava in mezzo non riusciva nemmeno a combattere.');
+    p.push('Nella realtà Annibale usò la mezzaluna e una cavalleria superiore, e vinse: per il libro, circa 50.000 caduti e 20.000 prigionieri romani.');
+  } else {
+    if(c.schieramento==='corridoi') p.push(`Gli elefanti che non si sono spaventati sono passati nei corridoi tra i manipoli senza fare danni${s.elefPanico?`; altri <b>${s.elefPanico}</b> gruppi, spaventati da trombe e grida, sono tornati indietro`:''}.`);
+    else p.push(`Con i manipoli a scacchiera gli elefanti non trovano corridoi liberi e travolgono le file romane${s.elefPanico?`; solo <b>${s.elefPanico}</b> gruppi si sono spaventati e sono tornati indietro`:''}.`);
+    if(c.massinissa==='si') p.push((s.spalleR||0)>20?'La cavalleria romana e quella di Massinissa hanno messo in fuga i cavalieri di Annibale e poi hanno attaccato i veterani alle spalle.':'La cavalleria di Massinissa ha vinto la sua battaglia, anche se non è riuscita a colpire alle spalle in tempo.');
+    else p.push((s.spalleN||0)>20?'Senza i cavalieri di Massinissa la cavalleria romana è più debole: sono i cavalieri di Annibale a colpire alle spalle.':(s.spalleR||0)>20?'Anche senza Massinissa la cavalleria romana riesce a colpire alle spalle, ma più tardi e con meno forza.':'Senza i cavalieri di Massinissa la battaglia della cavalleria resta in equilibrio: nessuno riesce a colpire l\'avversario alle spalle.');
+    p.push('Nella realtà Scipione lasciò i corridoi e aveva con sé Massinissa: vinse, e la Seconda guerra punica finì.');
+  }
+  return `<h2 style="color:${o.vince==='R'?'#8f3d22':o.vince==='N'?'#2f5f86':'#6f655a'}">${titolo}</h2>
+  <ul>${p.map(x=>`<li>${x}</li>`).join('')}</ul>
+  <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap"><button class="btn" onclick="document.getElementById('b-reset').click();document.getElementById('b-via').click()">Rigioca</button><button class="btn sec" onclick="document.getElementById('ris').className='ris'">Chiudi</button></div>`;
+}
+function ciclo(){
+  if(run&&S&&!S.over){ const n=B[bt].vel[velK]; for(let i=0;i<n;i++){ S.step(); if(S.over) break; } disegna(); pannello();
+    if(S.over){ run=false; document.getElementById('b-via').textContent='▶ Nuova battaglia'; const r=document.getElementById('ris'); r.innerHTML=spiegazione(); r.className='ris on'; } }
+  else if(bt==='milazzo'&&S){ disegna(); }
+  requestAnimationFrame(ciclo);
+}
+// apertura su una scheda precisa: #milazzo, #canne, #zama
+if(['#milazzo','#canne','#zama'].includes(location.hash)) bt=location.hash.slice(1);
+tabs(); nuova(); ciclo();
+window.__S=()=>S; window.__set=(b,o)=>{ bt=b; Object.assign(scelta[b],o||{}); tabs(); nuova(); };
+window.__avanza=n=>{ for(let i=0;i<n&&!S.over;i++) S.step(); disegna(); pannello(); if(S.over){ const r=document.getElementById('ris'); r.innerHTML=spiegazione(); r.className='ris on'; } };
+}
+</script>
+</body>
+</html>
